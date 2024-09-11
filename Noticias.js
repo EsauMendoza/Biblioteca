@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 
+//PUTO
+
 export default class Ac extends Component {
   constructor(props) {
     super(props);
