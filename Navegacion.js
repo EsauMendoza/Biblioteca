@@ -9,7 +9,6 @@ import QUIENESOMAB from './QuienesSomAB'; import HIS from './His';
 
 const Stack = createNativeStackNavigator();
 
-
 const Navegacion = () => {
     return (
         <NavigationContainer>
