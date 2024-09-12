@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'; import { Text, ImageBackground, Image, Button} from 'react-native';
-import PRINCIPAL from "./Principal"; import QS from "./QuienesSom"; import AC from './AcervoComt'; import S from './Servicios'; import AH from './AcervoHis'; 
+import PRINCIPAL from './Principal'; import QS from './QuienesSom'; import AC from './AcervoComt'; import S from './Servicios'; import AH from './AcervoHis'; 
 import PISO1 from './Piso1'; import PISO2 from './Piso2'; import PISO3 from './Piso3'; import PISO2NOVE from './Piso2nove'; import PISO4 from './Piso4'; import PISO5 from './Piso5'; 
 import BD from './BaseDatos'; import EVNTS from './Eventos'; import GH from './GaleriaHis'; import NTAS from './Noticias'; 
 

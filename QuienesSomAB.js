@@ -11,17 +11,17 @@ export default class QuienesSom extends Component {
   render() {
     return (
       <View style={{ height: '100%', width: '100%', borderColor: 'red', borderWidth: 0, backgroundColor:'#eeeeee'}}>
-        <View style={{ height: '40%', width:370, borderColor: 'blue', borderWidth: 0, backgroundColor:'#7b0000', marginLeft:10, marginTop:10}}></View>
-        <Image source={require('./fotos/Libreria8.jpg')} style={{borderColor: 'white', borderWidth: 0, height: '20%', width:'60%', marginTop:-280, borderRadius:7, marginLeft:70,}}></Image>
+        <View style={{ height: '35%', width:'90%', borderColor: 'blue', borderWidth: 0, backgroundColor:'#7b0000', marginLeft:20, marginTop:10}}></View>
+        <Image source={require('./fotos/Libreria8.jpg')} style={{borderColor: 'white', borderWidth: 0, height: '20%', width:'60%', marginTop:-250, borderRadius:7, marginLeft:70,}}></Image>
         
         <TouchableOpacity style={{marginLeft:80}} activeOpacity={0}>
-        <Text  style={{color: 'white',fontWeight: 'bold', fontSize:15, marginLeft:100, borderColor: 'white', borderWidth: 0, width:70, height: 25, marginTop:10}}>Historia</Text>
-        <Image source={require('./fotos/ico3,2.png')} style={{ borderColor: 'white', borderWidth: 0, height: 25, width:25, marginLeft:60, marginTop:-20}}></Image>
+        <Text  style={{color: 'white',fontWeight: 'bold', fontSize:15, marginLeft:100, borderColor: 'white', borderWidth: 0, width:70, height: 25, marginTop:20}}>Historia</Text>
+        <Image source={require('./fotos/ico3,2.png')} style={{ borderColor: 'white', borderWidth: 0, height: 25, width:25, marginLeft:60, marginTop:-30}}></Image>
         </TouchableOpacity>
 
         <TouchableOpacity style={{marginLeft:80}} activeOpacity={0}>
         <Text  style={{color: 'white',fontWeight: 'bold', fontSize:15, marginLeft:100, borderColor: 'white', borderWidth: 0, width:100, height: 25, marginTop:10}}>Hoy en dia</Text>
-        <Image source={require('./fotos/ico3,2.png')} style={{ borderColor: 'white', borderWidth: 0, height: 25, width:25, marginLeft:60, marginTop:-25}}></Image>
+        <Image source={require('./fotos/ico3,2.png')} style={{ borderColor: 'white', borderWidth: 0, height: 25, width:25, marginLeft:60, marginTop:-30}}></Image>
         </TouchableOpacity>
 
         <Image source={require('./fotos/ico3.png')} style={{ borderColor: 'red', borderWidth: 0, height: 25, width:25, marginLeft:40, marginTop:60}}></Image>

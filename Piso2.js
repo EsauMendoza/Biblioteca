@@ -24,7 +24,7 @@ export default class Piso2nove extends Component {
         <View style={{borderWidth: 1,borderColor: 'gray', flexDirection: 'row', alignItems: 'center',flex: 0.0001, width:340, marginLeft:20, marginTop: 20}}></View>
 
         <View style={{ height: '32%', width: '86.5%', borderColor: 'red', borderWidth: 0, marginTop: 10, marginLeft:'5%'}}>
-          <Text style={{color: 'black', fontSize:16, lineHeight: 25, textAlign: 'justify',  height: '100%', width: '100%'}}>Dentro de la Colección privada se ha conformado el Tesoro de la Biblioteca Álvarez del Castillo. Entre ellas se incluyen las siguientes colecciones: Hemeroteca, Manuscritos, Impresos Europeos, Impresos Mexicanos, Impresos Jaliscienses, Lenguas Indígenas, Misceláneas, Códices Facsimilares y el Fondo Reservado.</Text>
+          <Text style={{color: 'black', fontSize:18, lineHeight: 25, textAlign: 'justify',  height: '100%', width: '100%'}}>Dentro de la Colección privada se ha conformado el Tesoro de la Biblioteca Álvarez del Castillo. Entre ellas se incluyen las siguientes colecciones: Hemeroteca, Manuscritos, Impresos Europeos, Impresos Mexicanos, Impresos Jaliscienses, Lenguas Indígenas, Misceláneas, Códices Facsimilares y el Fondo Reservado.</Text>
         </View>
 
         <View style={{borderWidth: 1,borderColor: 'gray', flexDirection: 'row', alignItems: 'center',flex: 0.0001, width:340, marginLeft:20, marginTop: 0}}></View>

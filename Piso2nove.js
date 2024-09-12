@@ -24,7 +24,7 @@ export default class Piso2nove extends Component {
         <View style={{borderWidth: 1,borderColor: 'gray', flexDirection: 'row', alignItems: 'center',flex: 0.0001, width:340, marginLeft:20, marginTop: 20}}></View>
 
         <View style={{ height: '32%', width: '86.5%', borderColor: 'red', borderWidth: 0, marginTop: 10, marginLeft:'5%'}}>
-          <Text style={{color: 'black', fontSize:16, lineHeight: 25, textAlign: 'justify',  height: '100%', width: '100%'}}>Incluye las más recientes adquisiciones de libros, periódicos y revistas de circulación nacional e internacional, además donaciones realizadas por parte de cámaras editoriales y consulados participantes en la Feria Internacional del Libro de Guadalajara (FIL).
+          <Text style={{color: 'black', fontSize:18, lineHeight: 25, textAlign: 'justify',  height: '100%', width: '100%'}}>Incluye las más recientes adquisiciones de libros, periódicos y revistas de circulación nacional e internacional, además donaciones realizadas por parte de cámaras editoriales y consulados participantes en la Feria Internacional del Libro de Guadalajara (FIL).
           laboratorio de cómputo y acceso a internet inalámbrico, juegos de mesa y un aula de trabajo.Se ubica en la Planta baja.</Text>
         </View>
 

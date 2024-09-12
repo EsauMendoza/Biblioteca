@@ -47,8 +47,8 @@ const App = () => {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => N.navigate('Piso3')} activeOpacity={1} style={{ borderColor: 'gray', borderWidth: 0.5, width:'100%', height: 70, backgroundColor:'gainsboro'}}>
-                <Text style={{color: 'darkred', fontSize:13.5,fontWeight:'bold', marginLeft:80, borderColor: 'red', borderWidth: 0, width:210, height: 50, marginTop: 10}}>Piso 3 Hemeroteca Histórica</Text>
-                <Image source={require('./fotos/Antiguo3.jpg')} style={{ borderColor: 'red', borderWidth: 0, height: 50, width:50, marginTop:-50, borderRadius:7, marginLeft:10,}}></Image>
+                <Text style={{color: 'darkred', fontSize:13.5,fontWeight:'bold', marginLeft:80, borderColor: 'red', borderWidth: 0, width:210, height: 50, marginTop: 20}}>Piso 3 Hemeroteca Histórica</Text>
+                <Image source={require('./fotos/Antiguo3.jpg')} style={{ borderColor: 'red', borderWidth: 0, height: 50, width:50, marginTop:-60, borderRadius:7, marginLeft:10,}}></Image>
                 <Text style={{color: 'darkred', fontSize:10, marginLeft:350, borderColor: 'blue', borderWidth: 0, width:40, height: 20, marginTop:-30}}>VER +</Text>
             </TouchableOpacity>
 
