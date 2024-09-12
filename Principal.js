@@ -59,7 +59,7 @@ const App = () => {
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => N.navigate('Ac')} activeOpacity={1} style={{ borderColor: 'gray', borderWidth: 0.5, width:'100%', height: 70, backgroundColor:'#FF5800'}}>
-                <Text style={{color: 'white',fontSize:18,fontWeight:'bold', marginLeft:170,  borderColor: 'blue', borderWidth: 0, width:180, height: 25, marginTop: 10, textAlign:'right'}}>ACERVO</Text>
+                <Text style={{color: 'white',fontSize:18,fontWeight:'bold', marginLeft:170,  borderColor: 'blue', borderWidth: 0, width:180, height: 25, marginTop: 10, textAlign:'left'}}>ACERVO</Text>
                 <Text style={{color: 'white',fontSize:18,fontWeight:'bold', marginLeft:170,  borderColor: 'blue', borderWidth: 0, width:180, height: 25, marginTop: 0}}>COMTEMPORÁNEO</Text>
                 <Image source={require('./fotos/ico1.png')} style={{ borderColor: 'blue', borderWidth: 0, height: 30, width:30, marginLeft:350, marginTop: -40 }}></Image>
             </TouchableOpacity>
@@ -84,7 +84,7 @@ const App = () => {
 
             <TouchableOpacity onPress={() => N.navigate('Bd')} activeOpacity={1} style={{ borderColor: 'gray', borderWidth: 0.5, width:'100%', height: 70, backgroundColor:'white'}}>
                 <Text style={{color: 'darkred', fontSize:18,fontWeight:'bold', marginLeft:20, borderColor: 'red', borderWidth: 0, width:150, height: 70, marginTop: 20}}>BASES DE DATOS</Text>
-                <Image source={require('./fotos/ico1.png')} style={{ borderColor: 'blue', borderWidth: 0, height: 30, width:30, marginLeft:160, marginTop:-70 }}></Image>
+                <Image source={require('./fotos/ico1.png')} style={{ borderColor: 'blue', borderWidth: 0, height: 30, width:30, marginLeft:170, marginTop:-70 }}></Image>
             </TouchableOpacity>
 
             <TouchableOpacity onPress={() => N.navigate('Evnts')} activeOpacity={1} style={{ borderColor: 'gray', borderWidth: 0.5, width:'100%', height: 70, backgroundColor:'#FF5800'}}>

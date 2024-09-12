@@ -12,14 +12,14 @@ export default class Piso2nove extends Component {
     return (
       <View style={{ height: '100%', width: '100%', borderColor: 'red', borderWidth: 0, backgroundColor:'#eeeeee'}}>
         <View style={{ height: 200, width:370, borderColor: 'blue', borderWidth: 0, backgroundColor:'#7b0000', marginLeft:10, marginTop:10}}></View>
-        <Image source={require('./fotos/Libreria10.jpg')} style={{borderColor: 'white', borderWidth: 0, height: '20%', width:'50%', marginTop:-180, borderRadius:7, marginLeft:100,}}></Image>
+        <Image source={require('./fotos/Libreria10.jpg')} style={{borderColor: 'white', borderWidth: 0, height: '15%', width:'45%', marginTop:-180, borderRadius:7, marginLeft:100,}}></Image>
         <TouchableOpacity activeOpacity={1}>
-        <Text  style={{color: 'white',textDecorationLine: 'underline',fontWeight: 'bold', fontSize:15, marginLeft:100, borderColor: 'white', borderWidth: 0, width:200, height: 25, marginTop:10}}>Busqueda en base de datos</Text>
+        <Text  style={{color: 'white',textDecorationLine: 'underline',fontWeight: 'bold', fontSize:15, marginLeft:100, borderColor: 'white', borderWidth: 0, width:200, height: 25, marginTop:20}}>Busqueda en base de datos</Text>
         <Image source={require('./fotos/ico2.png')} style={{ borderColor: 'white', borderWidth: 0, height: 25, width:25, marginLeft:75, marginTop:-25}}></Image>
         </TouchableOpacity>
 
-        <Image source={require('./fotos/ico3.png')} style={{ borderColor: 'red', borderWidth: 0, height: 25, width:25, marginLeft:40, marginTop:20}}></Image>
-        <Text style={{fontWeight: 'bold', color: 'black', fontSize:15, marginLeft:70, borderColor: 'red', borderWidth: 0, width:120, height: 20, marginTop:-20}}>Presentación</Text>
+        <Image source={require('./fotos/ico3.png')} style={{ borderColor: 'red', borderWidth: 0, height: 25, width:25, marginLeft:40, marginTop:30}}></Image>
+        <Text style={{fontWeight: 'bold', color: 'black', fontSize:15, marginLeft:70, borderColor: 'red', borderWidth: 0, width:120, height: 20, marginTop:-25}}>Presentación</Text>
         
         <View style={{borderWidth: 1,borderColor: 'gray', flexDirection: 'row', alignItems: 'center',flex: 0.0001, width:340, marginLeft:20, marginTop: 20}}></View>
 

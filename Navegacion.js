@@ -13,7 +13,7 @@ const Navegacion = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name=" " component={PRINCIPAL} options={{headerBackground:()=>(<Image source={require('./fotos/Logo.png')} style={{borderColor: 'green', borderWidth: 0, height: 60, width:250 }}></Image>)}}/>
+                <Stack.Screen name=" " component={PRINCIPAL} options={{headerBackground:()=>(<Image source={require('./fotos/Logo.png')} style={{borderColor: 'green', borderWidth: 0, height: '100%', width:'50%'}}></Image>)}}/>
                 <Stack.Screen name="Qs" component={QS} options={{ title: 'Quiénes Somos',headerTitleAlign: 'center', headerTintColor: '#FF5800', headerTitleStyle:{fontWeight:'bold', fontSize:17} ,headerStyle: {backgroundColor: 'white'} }} />
                 <Stack.Screen name="S" component={S} options={{ title: 'Servicios', headerTitleAlign: 'center', headerTintColor: '#FF5800', headerTitleStyle:{fontWeight:'bold', fontSize:17}, headerStyle: { backgroundColor: 'white' } }} />
                 <Stack.Screen name="Ah" component={AH} options={{ title: 'Acervo Histórico', headerTitleAlign: 'center', headerTintColor: '#FF5800',headerTitleStyle:{fontWeight:'bold', fontSize:17}, headerStyle: {backgroundColor: 'white' } }} />
