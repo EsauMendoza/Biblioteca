@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity, ScrollView, Linking} from 'react-native';
+import { View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
 
 export default class QuienesSom extends Component {
   constructor(props) {

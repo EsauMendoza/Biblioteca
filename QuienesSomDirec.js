@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-export default class Noticias extends Component {
+export default class QuienesSomDirec extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ export default class Noticias extends Component {
   render() {
     return (
       <View>
-        <Text> Noticias </Text>
+        <Text> QuienesSomDirec </Text>
       </View>
     );
   }

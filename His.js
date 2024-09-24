@@ -12,7 +12,7 @@ export default class His extends Component {
     return (
       <View style={{ height: '100%', width: '100%', borderColor: 'red', borderWidth: 0, backgroundColor:'#eeeeee'}}>
         <View style={{ height: '40%', width:370, borderColor: 'blue', borderWidth: 0, backgroundColor:'#7b0000', marginLeft:10, marginTop:10}}></View>
-        <Image source={require('./fotos/Libreria8.jpg')} style={{borderColor: 'white', borderWidth: 0, height: '20%', width:'60%', marginTop:-260, borderRadius:7, marginLeft:70,}}></Image>
+        <Image source={require('./fotos/Historia.jpg')} style={{borderColor: 'white', borderWidth: 0, height: '20%', width:'60%', marginTop:-260, borderRadius:7, marginLeft:70,}}></Image>
         
         <TouchableOpacity style={{marginLeft:80}} activeOpacity={0}>
         <Text  style={{color: 'white',fontWeight: 'bold', fontSize:15, marginLeft:20, borderColor: 'white', borderWidth: 0, width:120, height: 25, marginTop:10}}>Primera Sede</Text>

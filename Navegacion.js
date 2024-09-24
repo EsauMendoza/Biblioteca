@@ -1,20 +1,24 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack'; import { Text, ImageBackground, Image, Button} from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'; import { Text, ImageBackground, Image, Button, HeaderBackground, TouchableOpacity, DrawerLayoutAndroid} from 'react-native';
 import PRINCIPAL from './Principal'; import QS from './QuienesSom'; import AC from './AcervoComt'; import S from './Servicios'; import AH from './AcervoHis'; 
 import PISO1 from './Piso1'; import PISO2 from './Piso2'; import PISO3 from './Piso3'; import PISO2NOVE from './Piso2nove'; import PISO4 from './Piso4'; import PISO5 from './Piso5'; 
-import BD from './BaseDatos'; import EVNTS from './Eventos'; import GH from './GaleriaHis'; import NTAS from './Noticias'; 
+import BD from './BaseDatos'; import EVNTS from './Eventos'; import GH from './GaleriaHis'; import NTAS from './Noticias'; import DRAWER from './drawer'; 
 
-import QUIENESOMAB from './QuienesSomAB'; import HIS from './His';
+import QUIENESOMAB from './QuienesSomAB'; import HIS from './His'; import QUIENESSOMDIREC from './QuienesSomDirec'; import QuienesSomUbi from './QuienesSomUbi';
 
 const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const Navegacion = () => {
     return (
         <NavigationContainer>
+       
             <Stack.Navigator>
-                <Stack.Screen name=" " component={PRINCIPAL} options={{headerBackground:()=>(<Image source={require('./fotos/Logo.png')} style={{borderColor: 'green', borderWidth: 0, height: '100%', width:'50%'}}></Image>)}}/>
-                <Stack.Screen name="Qs" component={QS} options={{ title: 'Quiénes Somos',headerTitleAlign: 'center', headerTintColor: '#FF5800', headerTitleStyle:{fontWeight:'bold', fontSize:17} ,headerStyle: {backgroundColor: 'white'} }} />
+                <Stack.Screen name=" " component={PRINCIPAL} options={({navigation})=>({headerBackground:()=>(<Image source={require('./fotos/Logo.png')} style={{borderColor: 'green', borderWidth: 0, height: '100%', width:'50%'}}/>), headerRight:()=>(<TouchableOpacity
+                    onPress={() => navigation.toggleDrawer()}><Image source={require('./fotos/ico6.png')} style={{width: 70, height: 50, marginRight: -25}}/></TouchableOpacity>),})}/>
+                <Stack.Screen name="Qs" component={QS} options={{title: 'Quiénes Somos',headerTitleAlign: 'center', headerTintColor: '#FF5800', headerTitleStyle:{fontWeight:'bold', fontSize:17} ,headerStyle: {backgroundColor: 'white'} }} />
                 <Stack.Screen name="S" component={S} options={{ title: 'Servicios', headerTitleAlign: 'center', headerTintColor: '#FF5800', headerTitleStyle:{fontWeight:'bold', fontSize:17}, headerStyle: { backgroundColor: 'white' } }} />
                 <Stack.Screen name="Ah" component={AH} options={{ title: 'Acervo Histórico', headerTitleAlign: 'center', headerTintColor: '#FF5800',headerTitleStyle:{fontWeight:'bold', fontSize:17}, headerStyle: {backgroundColor: 'white' } }} />
                 <Stack.Screen name="Ac" component={AC} options={{ title: 'Acervo Contemporaneo', headerTitleAlign: 'center', headerTintColor: '#FF5800',headerTitleStyle:{fontWeight:'bold', fontSize:17}, headerStyle: { backgroundColor: 'white' } }} />
@@ -31,7 +35,10 @@ const Navegacion = () => {
 
                 <Stack.Screen name="Acerca" component={QUIENESOMAB} options={{ title: 'Acerca de la Biblioteca', headerTitleAlign: 'center',  headerTintColor: '#FF5800', headerStyle: { backgroundColor: 'white' } }} />
                 <Stack.Screen name="His" component={HIS} options={{ title: 'Historia', headerTitleAlign: 'center',  headerTintColor: '#FF5800', headerStyle: { backgroundColor: 'white' } }} />
+                <Stack.Screen name="Direc" component={QUIENESSOMDIREC} options={{ title: 'Directorio', headerTitleAlign: 'center',  headerTintColor: '#FF5800', headerStyle: { backgroundColor: 'white' } }} />
+                <Stack.Screen name="Ubi" component={QuienesSomUbi} options={{ title: 'Ubicacion', headerTitleAlign: 'center',  headerTintColor: '#FF5800', headerStyle: { backgroundColor: 'white' } }} />
             </Stack.Navigator>
+           
         </NavigationContainer>
     );
 };
