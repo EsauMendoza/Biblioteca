@@ -1,51 +1,102 @@
-import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity, Linking} from 'react-native';
+import React from 'react';
+import { View, Text, Image, TouchableOpacity, ScrollView, Linking } from 'react-native';
 
-export default class Piso2nove extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
+const sections = [
+  {
+    title: 'Busqueda en base de datos',
+    icon: require('./fotos/ico2.png'),
+    link: 'https://www.ejemplo.com'
+  },
+  {
+    title: 'Presentación',
+    icon: require('./fotos/ico3.png'),
+    link: 'https://www.ejemplo.com'
+  },
+  {
+    title: 'Sitios de interés',
+    icon: require('./fotos/ico4.png'),
+    link: 'https://www.ejemplo.com'
   }
+];
 
-  render() {
-    return (
-      <View style={{ height: '100%', width: '100%', borderColor: 'red', borderWidth: 0, backgroundColor:'#eeeeee'}}>
-        <View style={{ height: 300, width:390, borderColor: 'black', borderWidth: 0, backgroundColor:'#7b0000', marginLeft:10, marginTop:10}}></View>
-        <Image source={require('./fotos/Libros2.png')} style={{borderColor: 'white', borderWidth: 0, height: 180, width:280, marginTop:-260, borderRadius:7, marginLeft:65,}}></Image>
-        <TouchableOpacity activeOpacity={0}>
-        <Text  style={{color: 'white',textDecorationLine: 'underline',fontWeight: 'bold', fontSize:15, marginLeft:100, borderColor: 'white', borderWidth: 0, width:220, height: 25, marginTop:25}}>Busqueda en base de datos</Text>
-        <Image source={require('./fotos/ico2.png')} style={{ borderColor: 'white', borderWidth: 0, height: 25, width:25, marginLeft:75, marginTop:-25}}></Image>
-        </TouchableOpacity>
+const SectionItem = ({ title, icon, link }) => (
+  <TouchableOpacity
+    activeOpacity={0.8}
+    onPress={() => link && Linking.openURL(link)}
+    style={{
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingVertical: 5,
+      marginLeft: '5%'
+    }}
+  >
+    <Image
+      source={icon}
+      style={{ width: 20, height: 20, marginRight: 10 }}
+    />
+    <Text style={{ color: 'black', fontSize: 15, fontWeight: 'bold' }}>
+      {title}
+    </Text>
+  </TouchableOpacity>
+);
 
-        <Image source={require('./fotos/ico3.png')} style={{ borderColor: 'red', borderWidth: 0, height: 25, width:25, marginLeft:40, marginTop:50}}></Image>
-        <Text style={{fontWeight: 'bold', color: 'black', fontSize:15, marginLeft:70, borderColor: 'red', borderWidth: 0, width:150, height: 20, marginTop:-20}}>Presentación</Text>
-        
-        <View style={{borderWidth: 1,borderColor: 'gray', flexDirection: 'row', alignItems: 'center',flex: 0.0001, width:340, marginLeft:20, marginTop: 20}}></View>
+const Piso2 = () => (
+  <View style={{ flex: 1, backgroundColor: '#eeeeee' }}>
+    <View style={{ height: '30%', backgroundColor: '#7b0000', margin: 10, borderRadius: 5 }} />
+    <Image
+      source={require('./fotos/Libros2.png')}
+      style={{
+        height: '25%',
+        width: '60%',
+        borderRadius: 7,
+        position: 'absolute',
+        top: 25,
+        left: '20%'
+      }}
+    />
 
-        <View style={{ height: '32%', width: '86.5%', borderColor: 'red', borderWidth: 0, marginTop: 10, marginLeft:'5%'}}>
-          <Text style={{color: 'black', fontSize:18, lineHeight: 25, textAlign: 'justify',  height: '100%', width: '100%'}}>Dentro de la Colección privada se ha conformado el Tesoro de la Biblioteca Álvarez del Castillo. Entre ellas se incluyen las siguientes colecciones: Hemeroteca, Manuscritos, Impresos Europeos, Impresos Mexicanos, Impresos Jaliscienses, Lenguas Indígenas, Misceláneas, Códices Facsimilares y el Fondo Reservado.</Text>
-        </View>
+    {sections.slice(0, 2).map((section, index) => (
+      <SectionItem key={index} title={section.title} icon={section.icon} link={section.link} />
+    ))}
 
-        <View style={{borderWidth: 1,borderColor: 'gray', flexDirection: 'row', alignItems: 'center',flex: 0.0001, width:340, marginLeft:20, marginTop: 0}}></View>
+    <View
+      style={{
+        borderWidth: 1,
+        borderColor: 'gray',
+        width: '90%',
+        alignSelf: 'center',
+        marginVertical: 20
+      }}
+    />
 
-        <TouchableOpacity activeOpacity={0} style={{ borderColor: 'blue', borderWidth: 0, height: '13%', width:'60%',marginLeft:'5%'}}>
-        <Text  style={{fontWeight: 'bold', color: 'black', fontSize:15, marginLeft:30, marginTop: 25}}>Sitios de interés</Text>
-        <Image source={require('./fotos/ico4.png')} style={{ borderColor: 'red', borderWidth: 0, height: '20%', width:'10%', marginTop:-20}}></Image>
-        </TouchableOpacity>
+    <ScrollView
+      style={{
+        marginHorizontal: '5%',
+        marginVertical: '-5%',
+        marginBottom: -20,
+        borderColor: 'gray',
+        borderWidth: 0,
+      }}
+    >
+      <Text style={{ fontSize: 18, lineHeight: 25, textAlign: 'justify', borderWidth: 0, borderColor: 'gray' }}>
+        Dentro de la Colección privada se ha conformado el Tesoro de la Biblioteca Álvarez del Castillo. 
+        Entre ellas se incluyen las siguientes colecciones: Hemeroteca, Manuscritos, Impresos Europeos, 
+        Impresos Mexicanos, Impresos Jaliscienses, Lenguas Indígenas, Misceláneas, Códices Facsimilares y 
+        el Fondo Reservado. Aquí se encuentran valiosas piezas históricas que abarcan varios siglos de cultura 
+        y conocimiento. La colección está abierta a académicos e investigadores, con la finalidad de promover 
+        el estudio y la preservación de estos importantes documentos.
+      </Text>
+    </ScrollView>
 
-        <Image source={require('./fotos/Logo3.jpg')} style={{ borderColor: 'red', borderWidth: 0, height: '15%', width:'50%', marginLeft:'5%', marginTop:'-9%'}}></Image>
+    <View style={{ marginTop: 20 }}>
+      <SectionItem title={sections[2].title} icon={sections[2].icon} link={sections[2].link} />
+      
+      <Image
+        source={require('./fotos/Logo3.jpg')}
+        style={{ height: 50, width: 100, marginTop: 10, marginLeft:'5%' }}
+      />
+    </View>
+  </View>
+);
 
-
-
-
-
-
-
-
-
-
-      </View>
-    )
-  }
-}
+export default Piso2;

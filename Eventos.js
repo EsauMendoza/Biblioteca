@@ -11,7 +11,7 @@ export default class Evnts extends Component {
   render() {
     return (
       <View>
-        <Text> No hay nada </Text>
+        <Text> Ponganse a chambear CULEROS </Text>
       </View>
     );
   }

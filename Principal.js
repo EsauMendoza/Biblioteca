@@ -26,8 +26,10 @@ const App = () => {
     { title: 'Piso 2.2 Novedades', color: 'darkred', bgColor: 'gainsboro', icon: require('./fotos/Libreria5.jpg'), route: 'Piso2nove' },
     { title: 'Piso 4.1 Fondo...', color: 'darkred', bgColor: 'gainsboro', icon: require('./fotos/Libreria2.jpg'), route: 'Piso4' },
     { title: 'Piso 5.4 Ventana...', color: 'darkred', bgColor: 'gainsboro', icon: require('./fotos/Coleccion.jpg'), route: 'Piso5' },
-    { title: 'BASES DE DATOS', color: 'darkred', bgColor: 'white', icon: require('./fotos/ico1.png'), route: 'Bd' },
-    { title: 'EVENTOS', color: 'white', bgColor: '#FF5800', icon: require('./fotos/ico1.png'), route: 'Evnts' }
+    { title: 'BASE DE DATOS', color: 'darkred', bgColor: 'white', icon: require('./fotos/ico1.png'), route: 'Bd' },
+    { title: 'EVENTOS', color: 'white', bgColor: '#FF5800', icon: require('./fotos/ico1.png'), route: 'Evnts' },
+    { title: 'GALERIA HISTORICA', color: 'darkred', bgColor: 'White', icon: require('./fotos/ico1.png'), route: 'Gh' },
+    { title: 'NOTICIAS', color: 'white', bgColor: '#FF5800', icon: require('./fotos/ico1.png'), route: 'Ntas' },
   ];
 
   const navigation = useNavigation();
@@ -72,4 +74,5 @@ const App = () => {
 
 export default App;
 
+//No olvidar cambiar el puerto para el dispositivo
 //adb reverse tcp:8081 tcp:8081

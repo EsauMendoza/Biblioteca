@@ -58,16 +58,18 @@ const styles = StyleSheet.create({
   container: {
     height: '100%',
     width: '100%',
-    backgroundColor: 'gainsboro',
+    backgroundColor: 'gainsboro'
   },
   button: {
     borderColor: 'blue',
-    width: '96%',
+    width: '95%',
     height: 70,
     backgroundColor: 'white',
     marginTop: 20,
     marginLeft: 10,
     borderRadius: 5,
+    borderColor: 'gray',
+    borderWidth: 1,
   },
   buttonText: {
     color: 'darkred',
@@ -88,7 +90,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     position: 'absolute',
-    top: '30%', // Ajusta según necesites
+    top: '30%',
   },
 });
 

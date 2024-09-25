@@ -1,42 +1,66 @@
-import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, Image} from 'react-native';
+import React from 'react';
+import { View, Text, TouchableOpacity, Image, FlatList } from 'react-native';
 
-export default class Piso1 extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
+const items = [
+  { title: '1.1.1 Ramo Civil. Real Audiencia', image: require('./fotos/Antiguo2.jpg') },
+  { title: '1.1.2 Ramo Criminal. Real Audiencia', image: require('./fotos/Antiguo3.jpg') },
+  { title: '1.1.3 Ramo Fiscal. Real Audiencia', image: require('./fotos/Antiguo4.jpg') },
+  { title: '1.1.4 Bienes de difuntos. Real Audiencia', image: require('./fotos/Antiguo6.jpg') }
+];
 
-  render() {
-    return (
-        <View style={{ height: '100%', width: '100%', borderColor: 'blue', borderWidth: 0, backgroundColor:'gainsboro'}}>
-        
-        <TouchableOpacity activeOpacity={1} style={{ borderColor: 'blue', borderWidth:0, width:'96%', height: 70, backgroundColor:'white', marginTop: 20, marginLeft:10,borderRadius:5}}>
-          <Text style={{color: 'darkred', fontSize:12.5,fontWeight:'bold', marginLeft:80, borderColor: 'red', borderWidth: 0, width:250, height: 30, marginTop: 20}}>1.1.1 Ramo Civil. Real Audiencia</Text>
-          <Image source={require('./fotos/Antiguo2.jpg')} style={{ borderColor: 'blue', borderWidth: 0, height: 50, width:50, marginTop:-40, borderRadius:7, marginLeft:10,}}></Image>
-          <Image source={require('./fotos/ico1.png')} style={{marginLeft:'89%', borderColor: 'blue', borderWidth: 0, width:30, height: 30, marginTop:-40}}></Image>
-        </TouchableOpacity>
+const ItemButton = ({ title, image }) => (
+  <TouchableOpacity
+    activeOpacity={1}
+    style={{
+      borderColor: 'gray',
+      borderWidth: 1,
+      width: '95%',
+      height: 70,
+      backgroundColor: 'white',
+      marginTop: 20,
+      marginLeft: 10,
+      borderRadius: 5,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingHorizontal: 10
+    }}
+  >
+    <Image
+      source={image}
+      style={{
+        borderColor: 'blue',
+        borderWidth: 0,
+        height: 50,
+        width: 50,
+        borderRadius: 7
+      }}
+    />
+    <Text style={{ color: 'darkred', fontSize: 12.5, fontWeight: 'bold', flex: 1, marginLeft: 20 }}>
+      {title}
+    </Text>
+    <Image
+      source={require('./fotos/ico1.png')}
+      style={{
+        width: 30,
+        height: 30,
+        marginLeft: 'auto'
+      }}
+    />
+  </TouchableOpacity>
+);
 
-        <TouchableOpacity activeOpacity={1} style={{ borderColor: 'blue', borderWidth:0, width:'96%', height: 70, backgroundColor:'white', marginTop: 20, marginLeft:10,borderRadius:5}}>
-          <Text style={{color: 'darkred', fontSize:12.5,fontWeight:'bold', marginLeft:80, borderColor: 'red', borderWidth: 0, width:250, height: 40, marginTop: 20}}>1.1.2 Ramo Criminal. Real Audiencia</Text>
-          <Image source={require('./fotos/Antiguo3.jpg')} style={{ borderColor: 'blue', borderWidth: 0, height: 50, width:50, marginTop:-50, borderRadius:7, marginLeft:10,}}></Image>
-          <Image source={require('./fotos/ico1.png')} style={{marginLeft:'89%', borderColor: 'blue', borderWidth: 0, width:30, height: 30, marginTop:-40}}></Image>
-        </TouchableOpacity>
-        
-        <TouchableOpacity activeOpacity={1} style={{ borderColor: 'blue', borderWidth:0, width:'96%', height: 70, backgroundColor:'white', marginTop: 20, marginLeft:10,borderRadius:5}}>
-          <Text style={{color: 'darkred', fontSize:12.5,fontWeight:'bold', marginLeft:80, borderColor: 'red', borderWidth: 0, width:250, height: 30, marginTop: 20}}>1.1.3 Ramo Fiscal. Real Audiencia</Text>
-          <Image source={require('./fotos/Antiguo4.jpg')} style={{ borderColor: 'blue', borderWidth: 0, height: 50, width:50, marginTop:-40, borderRadius:7, marginLeft:10,}}></Image>
-          <Image source={require('./fotos/ico1.png')} style={{marginLeft:'89%', borderColor: 'blue', borderWidth: 0, width:30, height: 30, marginTop:-40}}></Image>
-        </TouchableOpacity>
+const Piso1 = () => {
+  return (
+    <View style={{ height: '100%', width: '100%', backgroundColor: 'gainsboro' }}>
+      <FlatList
+        data={items}
+        keyExtractor={(item) => item.title}
+        renderItem={({ item }) => <ItemButton title={item.title} image={item.image} />}
+        contentContainerStyle={{ paddingVertical: 10 }}
+      />
+    </View>
+  );
+};
 
-        <TouchableOpacity activeOpacity={1} style={{ borderColor: 'blue', borderWidth:0, width:'96%', height: 70, backgroundColor:'white', marginTop: 20, marginLeft:10,borderRadius:5}}>
-          <Text style={{color: 'darkred', fontSize:12.5,fontWeight:'bold', marginLeft:80, borderColor: 'red', borderWidth: 0, width:'60%', height: 70, marginTop: 20}}>1.1.4. -Bienes de difuntos. Real Audiencia</Text>
-          <Image source={require('./fotos/Antiguo6.jpg')} style={{ borderColor: 'blue', borderWidth: 0, height: 50, width:50, marginTop:-80, borderRadius:7, marginLeft:10,}}></Image>
-          <Image source={require('./fotos/ico1.png')} style={{marginLeft:'89%', borderColor: 'blue', borderWidth: 0, width:30, height: 30, marginTop:-40}}></Image>
-        </TouchableOpacity>
-
-      </View>
-    );
-  }
-}
+export default Piso1;

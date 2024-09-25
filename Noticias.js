@@ -11,7 +11,11 @@ export default class Noticias extends Component {
   render() {
     return (
       <View>
-        <Text> Noticias </Text>
+        <Text>
+          Titulo de la Noticias
+          Fecha de la Noticia
+          Descripcion de la noticia
+        </Text>
       </View>
     );
   }
