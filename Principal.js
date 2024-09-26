@@ -74,5 +74,5 @@ const App = () => {
 
 export default App;
 
-//No olvidar cambiar el puerto para el dispositivo
+//No olvidar cambiar el puerto para el dispositivo USANDO
 //adb reverse tcp:8081 tcp:8081

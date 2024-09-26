@@ -1,49 +1,26 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Image, TouchableOpacity } from 'react-native';
-import PRINCIPAL from './Principal';
-import QS from './QuienesSom';
-import AC from './AcervoComt';
-import S from './Servicios';
-import AH from './AcervoHis';
-import PISO1 from './Piso1';
-import PISO2 from './Piso2';
-import PISO3 from './Piso3';
-import PISO2NOVE from './Piso2nove';
-import PISO4 from './Piso4';
-import PISO5 from './Piso5';
-import BD from './BaseDatos';
-import EVNTS from './Eventos';
-import GH from './GaleriaHis';
-import NTAS from './Noticias';
-import QUIENESOMAB from './QuienesSomAB';
-import HIS from './His';
-import QUIENESSOMDIREC from './QuienesSomDirec';
-import QuienesSomUbi from './QuienesSomUbi';
+import { Image} from 'react-native';
+import PRINCIPAL from './Principal'; import QS from './QuienesSom'; import AC from './AcervoComt'; import S from './Servicios'; import AH from './AcervoHis';
+import PISO1 from './Piso1'; import PISO2 from './Piso2'; import PISO3 from './Piso3'; import PISO2NOVE from './Piso2nove'; import PISO4 from './Piso4';
+import PISO5 from './Piso5'; import BD from './BaseDatos'; import EVNTS from './Eventos'; import GH from './GaleriaHis'; import NTAS from './Noticias';
+import QUIENESOMAB from './QuienesSomAB'; import HIS from './His'; import QUIENESSOMDIREC from './QuienesSomDirec'; import QuienesSomUbi from './QuienesSomUbi';
 
-const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const LogoHeader = () => (
   <Image
     source={require('./fotos/Logo.png')}
-    style={{ borderColor: 'green', borderWidth: 0, height: '100%', width: '50%' }}
-  />
-);
-
-const RightButton = ({ navigation }) => (
-  <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
-  </TouchableOpacity>
-);
+    style={{height: '100%', width: '50%' }}/>
+  );
 
 const defaultScreenOptions = (title) => ({
   title,
   headerTitleAlign: 'center',
   headerTintColor: '#FF5800',
   headerTitleStyle: { fontWeight: 'bold', fontSize: 14 },
-  headerStyle: { borderWidth: 0, backgroundColor: 'white', borderColor: 'blue' },
+  headerStyle: {backgroundColor: 'white'},
 });
 
 const Navegacion = () => {
@@ -51,14 +28,16 @@ const Navegacion = () => {
     <NavigationContainer>
 
       <Drawer.Navigator initialRouteName="Principal" >
-        <Drawer.Screen 
-          name="INICIO" 
-          component={PRINCIPAL} 
-          options={{
-            headerBackground: () => <LogoHeader />,
-            headerRight: ({ navigation }) => <RightButton navigation={navigation} />,
-          }}
-        />
+      <Drawer.Screen name="INICIO"
+      component={PRINCIPAL}
+      options={{
+        headerBackground: () => <LogoHeader />,
+        headerTitleAlign: 'center',
+        headerTintColor: '#FF5800',
+        headerTitleStyle: { fontWeight: 'bold', fontSize: 15 },
+        headerStyle: {backgroundColor: 'red'} 
+        }}/>
+
         <Drawer.Screen name="Qs" component={QS} options={{ ...defaultScreenOptions('QUIENES SOMOS') }} />
         <Drawer.Screen name="S" component={S} options={{ ...defaultScreenOptions('SERVICIOS') }} />
         <Drawer.Screen name="Ah" component={AH} options={{ ...defaultScreenOptions('ACERVO HISTORICO') }} />
