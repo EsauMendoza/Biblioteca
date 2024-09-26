@@ -37,17 +37,17 @@ const App = () => {
       />
       <MenuButton 
         title="Conoce la Biblioteca" 
-        onPress={() => {/* Navigate to corresponding screen */}} 
+        onPress={() => navigation.navigate('Qsb')} 
         imageSource={require('./fotos/Biblioteca1.jpg')}
       />
       <MenuButton 
         title="La Biblioteca en Redes Sociales" 
-        onPress={() => {/* Navigate to corresponding screen */}} 
+        onPress={() => navigation.navigate('Qsr')} 
         imageSource={require('./fotos/Redes.png')}
       />
       <MenuButton 
         title="Creditos de la Aplicacion" 
-        onPress={() => {/* Navigate to corresponding screen */}} 
+        onPress={() => navigation.navigate('Qsc')} 
         imageSource={require('./fotos/Biblioteca2.jpg')}
       />
     </View>
