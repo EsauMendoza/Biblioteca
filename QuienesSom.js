@@ -1,11 +1,11 @@
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import React from 'react';
-import { useNavigation } from '@react-navigation/native'; 
+import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const MenuButton = ({ title, onPress, imageSource }) => (
   <TouchableOpacity onPress={onPress} activeOpacity={1} style={styles.button}>
-    <Text style={styles.buttonText}>{title}</Text>
     <Image source={imageSource} style={styles.buttonImage} />
+    <Text style={styles.buttonText}>{title}</Text>
     <Image source={require('./fotos/ico1.png')} style={styles.iconImage} />
   </TouchableOpacity>
 );
@@ -56,41 +56,41 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: '100%',
+    flex: 1,
     width: '100%',
-    backgroundColor: 'gainsboro'
+    backgroundColor: 'gainsboro',
+    alignItems: 'center', // Centra horizontalmente
+    paddingTop: 20,
   },
   button: {
-    borderColor: 'blue',
+    flexDirection: 'row', // Alinea las imágenes, texto y la flecha en fila
+    alignItems: 'center',
+    justifyContent: 'space-between', // Distribuye elementos de manera uniforme
     width: '95%',
     height: 70,
     backgroundColor: 'white',
-    marginTop: 20,
-    marginLeft: 10,
+    marginVertical: 10,
     borderRadius: 5,
     borderColor: 'gray',
     borderWidth: 1,
-  },
-  buttonText: {
-    color: 'darkred',
-    fontSize: 12.5,
-    fontWeight: 'bold',
-    marginLeft: 80,
-    marginTop: '7%',
+    paddingHorizontal: 10, // Espacio horizontal
   },
   buttonImage: {
     height: 50,
     width: 50,
     borderRadius: 7,
-    marginLeft: 10,
-    marginTop: -30,
+  },
+  buttonText: {
+    flex: 1, // Ocupa el espacio restante entre la imagen y la flecha
+    color: 'darkred',
+    fontSize: 12.5,
+    fontWeight: 'bold',
+    marginLeft: 20, // Separación entre la imagen y el texto
+    textAlign: 'left', // Alinea el texto a la izquierda
   },
   iconImage: {
-    marginLeft: '89%',
     width: 30,
     height: 30,
-    position: 'absolute',
-    top: '30%',
   },
 });
 

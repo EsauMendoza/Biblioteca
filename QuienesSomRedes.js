@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, ScrollView, Linking } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Linking } from 'react-native';
 
 const sections = [
   {
@@ -36,26 +36,27 @@ const SectionItem = ({ title, icon, link }) => (
     style={{
       flexDirection: 'row',
       alignItems: 'center',
-      paddingVertical: -20,
-      marginLeft: '5%',
-      marginTop:-50,
-      borderWidth:1,
-      borderColor:'red'
+      paddingVertical: 10,
+      paddingHorizontal: 10,
+      margin: 5,
+      backgroundColor: '#fff',
+      borderRadius: 5,
+      flex: 1,
     }}
   >
     <Image
       source={icon}
-      style={{ width: 20, height: 20, marginRight: 10, marginTop:0}}
+      style={{ width: 30, height: 30, marginRight: 10 }}
     />
-    <Text style={{ color: 'white', fontSize: 15, fontWeight: 'bold', marginTop:'-1%'}}>
+    <Text style={{ color: '#333', fontSize: 15, fontWeight: 'bold' }}>
       {title}
     </Text>
   </TouchableOpacity>
 );
 
 const Piso2 = () => (
-  <View style={{ flex: 1, backgroundColor: '#eeeeee', borderWidth:1, borderColor:'green'}}>
-    <View style={{ height: '35%', backgroundColor: '#7b0000', margin: -20, borderRadius: 5, borderWidth:1, borderColor:'blue'}} />
+  <View style={{ flex: 1, backgroundColor: '#eeeeee' }}>
+    <View style={{ height: '35%', backgroundColor: '#7b0000', margin: -20, borderRadius: 5 }} />
     <Image
       source={require('./fotos/Biblioteca2.jpg')}
       style={{
@@ -67,39 +68,54 @@ const Piso2 = () => (
         left: '20%'
       }}
     />
+    <Text style={{
+      color: 'white',
+      fontSize: 12,
+      fontWeight: 'bold',
+      height: '3%',
+      width: '60%',
+      marginLeft: '20%',
+      marginTop: -40
+    }}>
+      Biblioteca Pública del Estado de Jalisco:
+    </Text>
+    <Text style={{
+      color: 'white',
+      fontSize: 12,
+      fontWeight: 'bold',
+      height: '3%',
+      width: '30%',
+      marginLeft: '35%'
+    }}>
+      "Juan Jose Arreola"
+    </Text>
 
-    {sections.slice(0, 1).map((section, index) => (
-      <SectionItem key={index} title={section.title} icon={section.icon} link={section.link} />
-    ))}
+    <Text style={{
+      color: 'black',
+      fontSize: 15,
+      fontWeight: 'bold',
+      marginLeft: '1%',
+      marginTop: 20
+    }}>
+      Conoce más de nosotros en nuestras redes sociales
+    </Text>
 
-    <View
-      style={{
-        borderWidth: 1,
-        borderColor: 'gray',
-        width: '90%',
-        alignSelf: 'center',
-        marginVertical: 15
-      }}
-    />
-
-    <View
-      style={{
-        marginHorizontal: '5%',
-        marginVertical: '-5%',
-        borderColor: 'red',
-        borderWidth: 1,
-      }}>
-      <Text style={{ fontSize: 18, lineHeight: 25, textAlign: 'justify', borderWidth: 1, borderColor: 'gray' }}>
+    <View style={{ padding: 80, marginTop:-60}}>
+      <Text style={{ fontSize: 20, lineHeight: 25, textAlign: 'justify', color: 'black' }}>
         Dentro de nuestras instalaciones puede usted consultar a texto completo y de alta calidad muchas de las colecciones
-        con su respectiva base de datos con el fin de ayudarle con su tarea de investigacion.
+        con su respectiva base de datos con el fin de ayudarle con su tarea de investigación.
       </Text>
     </View>
 
-    <View style={{marginTop: 20, borderWidth:1, borderColor:'blue', width:'100%', height:'25%'}}>
-      <SectionItem title={sections[1].title} icon={sections[1].icon} link={sections[1].link} />
-      <SectionItem title={sections[2].title} icon={sections[2].icon} link={sections[2].link} />
-      <SectionItem title={sections[3].title} icon={sections[3].icon} link={sections[3].link} />
-      <SectionItem title={sections[4].title} icon={sections[4].icon} link={sections[4].link} />
+    <View style={{ flex: 1, justifyContent: 'flex-end', marginBottom: 50 }}>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 20 }}>
+        <SectionItem title={sections[1].title} icon={sections[1].icon} link={sections[1].link} />
+        <SectionItem title={sections[2].title} icon={sections[2].icon} link={sections[2].link} />
+      </View>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 20, marginTop: 10 }}>
+        <SectionItem title={sections[3].title} icon={sections[3].icon} link={sections[3].link} />
+        <SectionItem title={sections[4].title} icon={sections[4].icon} link={sections[4].link} />
+      </View>
     </View>
   </View>
 );

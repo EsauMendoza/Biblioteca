@@ -85,7 +85,7 @@ export default class Noticias extends Component {
             keyExtractor={(item, index) => index.toString()}
           />
         ) : (
-          <Text>No hay noticias disponibles</Text>
+          <Text>CARGANDO NOTICIAS...</Text>
         )}
         <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={this.handleAnterior} style={styles.navButton} disabled={pagina === 0}>
@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     borderWidth: 0,
     borderColor: 'gray',
+    color:'black'
   },
   fech: {
     color: 'gray',

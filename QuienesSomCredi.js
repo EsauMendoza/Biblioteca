@@ -11,7 +11,7 @@ export default class QuienesSomCredi extends Component {
   render() {
     return (
       <View>
-        <Text> QuienesSomCredi </Text>
+        <Text style={{color:'black'}}> La Andrea y Yo, pos quien mas :D</Text>
       </View>
     );
   }
