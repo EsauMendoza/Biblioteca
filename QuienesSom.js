@@ -17,27 +17,27 @@ const App = () => {
     <View style={styles.container}>
       <MenuButton 
         title="Acerca de la Biblioteca" 
-        onPress={() => navigation.navigate('Acerca')} 
+        onPress={() => navigation.navigate('Qsab')} 
         imageSource={require('./fotos/Libros1.jpg')}
       />
       <MenuButton 
         title="Historia" 
-        onPress={() => navigation.navigate('His')} 
+        onPress={() => navigation.navigate('Qsh')} 
         imageSource={require('./fotos/Historia.jpg')}
       />
       <MenuButton 
         title="Directorio" 
-        onPress={() => navigation.navigate('Direc')} 
+        onPress={() => navigation.navigate('Qsd')} 
         imageSource={require('./fotos/Logo2.png')}
       />
       <MenuButton 
         title="Ubicación" 
-        onPress={() => navigation.navigate('Ubi')} 
+        onPress={() => navigation.navigate('Qsu')} 
         imageSource={require('./fotos/Mapa.png')}
       />
       <MenuButton 
         title="Conoce la Biblioteca" 
-        onPress={() => navigation.navigate('Qsb')} 
+        onPress={() => navigation.navigate('Qscb')} 
         imageSource={require('./fotos/Biblioteca1.jpg')}
       />
       <MenuButton 
@@ -59,13 +59,13 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     backgroundColor: 'gainsboro',
-    alignItems: 'center', // Centra horizontalmente
+    alignItems: 'center',
     paddingTop: 20,
   },
   button: {
-    flexDirection: 'row', // Alinea las imágenes, texto y la flecha en fila
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between', // Distribuye elementos de manera uniforme
+    justifyContent: 'space-between',
     width: '95%',
     height: 70,
     backgroundColor: 'white',

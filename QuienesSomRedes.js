@@ -72,7 +72,7 @@ const Piso2 = () => (
       color: 'white',
       fontSize: 12,
       fontWeight: 'bold',
-      height: '3%',
+      height: '5%',
       width: '60%',
       marginLeft: '20%',
       marginTop: -40
@@ -85,6 +85,7 @@ const Piso2 = () => (
       fontWeight: 'bold',
       height: '3%',
       width: '30%',
+      marginTop: -20,
       marginLeft: '35%'
     }}>
       "Juan Jose Arreola"
