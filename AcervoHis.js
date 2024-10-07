@@ -1,79 +1,92 @@
-import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-export default class Ah extends Component {
-  renderFloorOption(floor, description, imgSrc) {
-    return (
-      <TouchableOpacity 
-        activeOpacity={1} 
-        style={styles.touchable}
-      >
-        <Text style={styles.text}>
-          {`${floor}. ${description}`}
-        </Text>
-        <Image 
-          source={imgSrc} 
-          style={styles.image} 
-        />
-        <Image 
-          source={require('./fotos/ico1.png')} 
-          style={styles.icon}
-        />
-      </TouchableOpacity>
-    );
-  }
+const MenuButton = ({ title, onPress, imageSource }) => (
+  <TouchableOpacity onPress={onPress} activeOpacity={1} style={styles.button}>
+    <Image source={imageSource} style={styles.buttonImage} />
+    <Text style={styles.buttonText}>{title}</Text>
+    <Image source={require('./fotos/ico1.png')} style={styles.iconImage} />
+  </TouchableOpacity>
+);
 
-  render() {
-    return (
-      <View style={styles.container}>
-        {this.renderFloorOption('Piso 1', 'Archivos y Mapoteca', require('./fotos/Antiguo2.jpg'))}
-        {this.renderFloorOption('Piso 2', 'Biblioteca Álvarez del Castillo y Fonoteca', require('./fotos/Libreria4.jpg'))}
-        {this.renderFloorOption('Piso 3', 'Periódicos de Jalisco', require('./fotos/Antiguo1.jpg'))}
-        {this.renderFloorOption('Piso 4', 'Publicaciones seriadas de Jalisco (Del S.XIX hasta 1982) y Fonoteca', require('./fotos/Libreria.jpg'))}
-        {this.renderFloorOption('Piso 5', 'Acervo General, Fondos Particulares, Cinemateca y Fototeca de Jalisco', require('./fotos/Libros3.jpg'))}
-        {this.renderFloorOption('Piso 6', 'Fondos Especiales', require('./fotos/Libreria5.jpg'))}
-      </View>
-    );
-  }
-}
+const App = () => {
+  const navigation = useNavigation();
 
-const styles = {
+  return (
+    <View style={styles.container}>
+      <MenuButton 
+        title="Piso 1. Archivos y Mapoteca" 
+        onPress={() => navigation.navigate('Ahp1')} 
+        imageSource={require('./fotos/Antiguo2.jpg')}
+      />
+      <MenuButton 
+        title="Piso 2. Biblioteca Álvarez del Castillo y Fonoteca" 
+        onPress={() => navigation.navigate('Ahp2')} 
+        imageSource={require('./fotos/Libreria4.jpg')}
+      />
+      <MenuButton 
+        title="Piso 3. Periódicos de Jalisco" 
+        onPress={() => navigation.navigate('Ahp3')} 
+        imageSource={require('./fotos/Antiguo1.jpg')}
+      />
+      <MenuButton 
+        title="Piso 4. Publicaciones seriadas de Jalisco (Del S.XIX hasta 1982) y Fonoteca" 
+        onPress={() => navigation.navigate('Ahp4')} 
+        imageSource={require('./fotos/Libreria.jpg')}
+      />
+      <MenuButton 
+        title="Piso 5. Acervo General, Fondos Particulares, Cinemateca y Fototeca de Jalisco" 
+        onPress={() => navigation.navigate('Ahp5')} 
+        imageSource={require('./fotos/Libros3.jpg')}
+      />
+      <MenuButton 
+        title="Piso 6. Fondos Especiales" 
+        onPress={() => navigation.navigate('Ahp6')} 
+        imageSource={require('./fotos/Libreria5.jpg')}
+      />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
   container: {
-    height: '100%',
+    flex: 1,
     width: '100%',
     backgroundColor: 'gainsboro',
+    alignItems: 'center',
+    paddingTop: 20,
   },
-  touchable: {
+  button: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     width: '95%',
     height: 70,
     backgroundColor: 'white',
-    marginTop: 20,
-    marginLeft: 10,
+    marginVertical: 10,
     borderRadius: 5,
-    flexDirection: 'row',
-    alignItems: 'center',
     borderColor: 'gray',
     borderWidth: 1,
+    paddingHorizontal: 10,
   },
-  text: {
-    color: 'darkred',
-    fontSize: 12.5,
-    fontWeight: 'bold',
-    marginLeft: 80,
-    width: '65%',
-  },
-  image: {
+  buttonImage: {
     height: 50,
     width: 50,
     borderRadius: 7,
-    marginLeft: 10,
-    position: 'absolute',
-    left: 10,
   },
-  icon: {
+  buttonText: {
+    flex: 1,
+    color: 'darkred',
+    fontSize: 12.5,
+    fontWeight: 'bold',
+    marginLeft: 20,
+    textAlign: 'left',
+  },
+  iconImage: {
     width: 30,
     height: 30,
-    marginLeft: 'auto',
-    marginRight: 10,
-  }
-};
+  },
+});
+
+export default App;

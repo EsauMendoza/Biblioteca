@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import { View, Text, Image, FlatList, StyleSheet, TouchableOpacity, Linking } from 'react-native';
 
-const resources = [
-  {
-    section: 'Catálogo Biblioteca',
-    items: [
-      { title: 'Consultar el Catálogo General (Aleph)', description: '', link: 'https://example.com/catalogo-general' },
-      { title: 'Colecciones Biblioteca Histórica', description: '', link: 'https://example.com/colecciones' },
-      { title: 'Consultar el catálogo Archivos Visuales y Sonoros', description: '', link: 'https://example.com/archivos' },
-      { title: 'Recursos electrónicos de acceso libre', description: '', link: 'https://example.com/recursos-libres' },
-    ],
-  },
-];
-
 export default class ServCata extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      resources,
+      resources: [
+        {
+          section: 'Catálogo Biblioteca',
+          items: [
+            { title: 'Consultar el Catálogo General (Aleph)', description: '', link: 'https://example.com/catalogo-general' },
+            { title: 'Colecciones Biblioteca Histórica', description: '', link: 'https://example.com/colecciones' },
+            { title: 'Consultar el catálogo Archivos Visuales y Sonoros', description: '', link: 'https://example.com/archivos' },
+            { title: 'Recursos electrónicos de acceso libre', description: '', link: '' },
+          ],
+        },
+      ],
     };
   }
 
@@ -37,11 +35,15 @@ export default class ServCata extends Component {
   );
 
   render() {
+    const { navigation } = this.props;
+
     return (
       <View style={styles.container}>
         <View style={styles.headerContainer}>
           <Image source={require('./fotos/Libreria4.jpg')} style={styles.headerImage} />
-          <Text style={styles.headerText}>Catálogo General de la Biblioteca</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Sr')}>
+            <Text style={styles.headerText}>Catálogo General de la Biblioteca</Text>
+          </TouchableOpacity>
         </View>
 
         <FlatList
@@ -79,12 +81,13 @@ const styles = StyleSheet.create({
     marginTop: 10,
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: 10
   },
   headerImage: {
     borderColor: 'white',
     borderWidth: 0,
     height: '60%',
-    width: '60%',
+    width: '75%',
     borderRadius: 7,
     marginBottom: 10,
   },
@@ -104,6 +107,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     elevation: 2,
+    marginTop:10
   },
   sectionHeader: {
     fontSize: 20,
@@ -118,7 +122,7 @@ const styles = StyleSheet.create({
   },
   link: {
     fontSize: 16,
-    color: 'darkred',
+    color: '#e7522e',
     marginRight: 10,
   },
   description: {

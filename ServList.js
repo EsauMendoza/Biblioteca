@@ -24,11 +24,11 @@ export default class ServList extends Component {
               {'\n'}<Text style={styles.boldText}>2.- Referencia.</Text>
               {'\n'}<Text style={styles.boldText}>3.- Servicios de Cómputo.</Text>
               {'\n'}<Text style={styles.boldText}>4.- Actividades culturales y académicas:</Text>
-              {'\n'}<Text style={styles.grayText}>a. Ciclos de Cine</Text>
-              {'\n'}<Text style={styles.grayText}>b. Talleres</Text>
-              {'\n'}<Text style={styles.grayText}>c. Charlas</Text>
-              {'\n'}<Text style={styles.grayText}>d. Círculos de lectura</Text>
-              {'\n'}<Text style={styles.grayText}>e. Conferencias</Text>
+              {'\n'}<Text style={styles.grayText}>{'\t'} a. Ciclos de Cine</Text>
+              {'\n'}<Text style={styles.grayText}>{'\t'} b. Talleres</Text>
+              {'\n'}<Text style={styles.grayText}>{'\t'} c. Charlas</Text>
+              {'\n'}<Text style={styles.grayText}>{'\t'} d. Círculos de lectura</Text>
+              {'\n'}<Text style={styles.grayText}>{'\t'} e. Conferencias</Text>
               {'\n'}<Text style={styles.boldText}>5.- Visitas guiadas.</Text>
               {'\n'}<Text style={styles.boldText}>6.- Guarda objetos.</Text>
               {'\n'}<Text style={styles.boldText}>7.- Conexión inalámbrica.</Text>
@@ -55,25 +55,26 @@ const styles = StyleSheet.create({
     backgroundColor: '#7b0000',
     marginLeft: 10,
     marginTop: 10,
+    borderRadius: 10
   },
   image: {
     borderRadius: 7,
-    height: '20%',
-    width: '60%',
-    marginTop: -200,
+    height: '25%',
+    width: '80%',
+    marginTop: -190,
     alignSelf: 'center',
   },
   scrollView: {
-    marginTop: 70,
+    marginTop: 40,
   },
   content: {
     height: '100%',
     width: '86.5%',
-    marginLeft: '5%',
+    marginLeft: '8%',
   },
   text: {
     color: 'black',
-    fontSize: 16, // Tamaño de fuente reducido
+    fontSize: 16,
     lineHeight: 25,
     textAlign: 'justify',
   },

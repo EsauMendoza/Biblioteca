@@ -71,13 +71,17 @@ export default class ServAtencion extends Component {
               {'\n'}
               Recorrido 4: Búsqueda en catálogo, tiempo estimado 2 hrs.
               {'\n\n'}
-              Entregar en el módulo de Atención a Usuarios o enviar a la responsable Martha Blanco, al correo: patricia.blanco@udg.mx
+              Entregar en el módulo de Atención a Usuarios o enviar a la responsable Martha Blanco, al 
+              {'\n'}
+              <Text style={styles.mailText} onPress={()=>{Linking.openURL('mailto: patricia.blanco@udg.mx')}}>Correo: patricia.blanco@udg.mx</Text>
               {'\n'}
               <Text style={styles.phoneText} onPress={() => this.openDial('3338364530')}>Teléfono: 33 3836 4530 ext. 22143</Text>
               {'\n\n'}
               <Text style={styles.boldTitle}>Nivel Media Superior en adelante:</Text>
               {'\n'}
-              Entregar en el módulo de Atención a Usuarios o enviar a la responsable Stefanie Muro, al correo: stefanie.muro@udg.mx
+              Entregar en el módulo de Atención a Usuarios o enviar a la responsable Stefanie Muro, al 
+              {'\n'}
+              <Text style={styles.mailText} onPress={()=>{Linking.openURL('mailto: stefanie.muro@udg.mx')}}>Correo: stefanie.muro@udg.mx</Text>
               {'\n'}
               <Text style={styles.phoneText} onPress={() => this.openDial('3338364530')}>Teléfono: 33 3836 4530 ext. 22258</Text>
             </Text>
@@ -96,24 +100,25 @@ const styles = StyleSheet.create({
   },
   headerContainer: {
     height: '40%',
-    width: 370,
+    width: '95%',
     backgroundColor: '#7b0000',
     marginLeft: 10,
     marginTop: 10,
+    borderRadius: 10
   },
   headerImage: {
     height: '20%',
-    width: '60%',
-    marginTop: -260,
+    width: '70%',
+    marginTop: '-70%',
     borderRadius: 7,
-    marginLeft: 70,
+    marginLeft: 55,
   },
   descriptionText: {
     color: 'white',
     fontWeight: 'bold',
-    fontSize: 12,
-    marginLeft: 50,
-    marginTop: 10,
+    fontSize: 13,
+    marginLeft: 53,
+    marginTop: 20,
     width: '70%',
     height: '10%',
     lineHeight: 15,
@@ -123,7 +128,7 @@ const styles = StyleSheet.create({
     height: 25,
     width: 25,
     marginLeft: 20,
-    marginTop: 30,
+    marginTop: '10%',
   },
   guidedVisitText: {
     fontWeight: 'bold',
@@ -159,6 +164,10 @@ const styles = StyleSheet.create({
     color: 'darkred',
   },
   phoneText: {
+    color: '#ce2307',
+    fontWeight: 'bold',
+  }, 
+  mailText: {
     color: 'darkred',
     fontWeight: 'bold',
   },

@@ -14,7 +14,6 @@ const App = () => {
     require('./fotos/carrusel6.png'),
   ];
 
-  // ESTILOS DE BOTONES
   const buttons = [
     { title: 'QUIÉNES SOMOS', color: 'darkred', bgColor: 'white', icon: require('./fotos/ico1.png'), route: 'Qs' },
     { title: 'SERVICIOS', color: 'white', bgColor: '#FF5800', icon: require('./fotos/ico1.png'), route: 'S' },
@@ -74,5 +73,4 @@ const App = () => {
 
 export default App;
 
-//No olvidar cambiar el puerto para el dispositivo USANDO
 //adb reverse tcp:8081 tcp:8081

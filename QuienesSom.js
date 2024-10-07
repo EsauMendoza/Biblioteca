@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: 'gray',
     borderWidth: 1,
-    paddingHorizontal: 10, // Espacio horizontal
+    paddingHorizontal: 10,
   },
   buttonImage: {
     height: 50,
@@ -81,12 +81,12 @@ const styles = StyleSheet.create({
     borderRadius: 7,
   },
   buttonText: {
-    flex: 1, // Ocupa el espacio restante entre la imagen y la flecha
+    flex: 1,
     color: 'darkred',
     fontSize: 12.5,
     fontWeight: 'bold',
-    marginLeft: 20, // Separación entre la imagen y el texto
-    textAlign: 'left', // Alinea el texto a la izquierda
+    marginLeft: 20,
+    textAlign: 'left',
   },
   iconImage: {
     width: 30,

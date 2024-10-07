@@ -78,7 +78,7 @@ const Piso2 = () => (
         borderWidth: 0,
       }}
     >
-      <Text style={{ fontSize: 18, lineHeight: 25, textAlign: 'justify', borderWidth: 0, borderColor: 'gray' }}>
+      <Text style={{color:'black', fontSize: 18, lineHeight: 25, textAlign: 'justify', borderWidth: 0, borderColor: 'gray' }}>
         Dentro de la Colección privada se ha conformado el Tesoro de la Biblioteca Álvarez del Castillo. 
         Entre ellas se incluyen las siguientes colecciones: Hemeroteca, Manuscritos, Impresos Europeos, 
         Impresos Mexicanos, Impresos Jaliscienses, Lenguas Indígenas, Misceláneas, Códices Facsimilares y 

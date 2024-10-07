@@ -190,10 +190,11 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   header: {
-    fontSize: 20,
+    fontSize: 19,
     fontWeight: 'bold',
     color: 'darkred',
     marginBottom: 10,
+    marginLeft: 10
   },
   subHeader: {
     fontSize: 18,
@@ -208,8 +209,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   link: {
-    fontSize: 16,
-    color: 'darkred',
+    fontSize: 15,
+    color: '#ce2307',
     fontWeight: 'bold',
     marginBottom: 5, 
   },

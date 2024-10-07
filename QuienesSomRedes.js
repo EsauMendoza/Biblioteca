@@ -56,52 +56,53 @@ const SectionItem = ({ title, icon, link }) => (
 
 const Piso2 = () => (
   <View style={{ flex: 1, backgroundColor: '#eeeeee' }}>
-    <View style={{ height: '35%', backgroundColor: '#7b0000', margin: -20, borderRadius: 5 }} />
+    <View style={{ height: '35%',width:'95%', backgroundColor: '#7b0000', margin: -20, borderRadius: 5, marginLeft:10, borderRadius:10, marginTop:10}} />
     <Image
       source={require('./fotos/Biblioteca2.jpg')}
       style={{
         height: '20%',
-        width: '60%',
+        width: '80%',
         borderRadius: 7,
         position: 'absolute',
-        top: 20,
-        left: '20%'
+        top: 40,
+        left: '10%'
       }}
     />
     <Text style={{
       color: 'white',
-      fontSize: 12,
+      fontSize: 14,
       fontWeight: 'bold',
       height: '5%',
-      width: '60%',
-      marginLeft: '20%',
+      width: '80%',
+      marginLeft: '15%',
       marginTop: -40
     }}>
       Biblioteca Pública del Estado de Jalisco:
     </Text>
     <Text style={{
       color: 'white',
-      fontSize: 12,
+      fontSize: 14,
       fontWeight: 'bold',
       height: '3%',
-      width: '30%',
+      width: '80%',
       marginTop: -20,
-      marginLeft: '35%'
+      marginLeft: '32%'
     }}>
       "Juan Jose Arreola"
     </Text>
 
     <Text style={{
       color: 'black',
-      fontSize: 15,
+      fontSize: 17,
       fontWeight: 'bold',
-      marginLeft: '1%',
-      marginTop: 20
+      marginLeft: '6%',
+      marginTop: 30,
+      width: '90%'
     }}>
       Conoce más de nosotros en nuestras redes sociales
     </Text>
 
-    <View style={{ padding: 80, marginTop:-60}}>
+    <View style={{ padding: 25, marginTop:0}}>
       <Text style={{ fontSize: 20, lineHeight: 25, textAlign: 'justify', color: 'black' }}>
         Dentro de nuestras instalaciones puede usted consultar a texto completo y de alta calidad muchas de las colecciones
         con su respectiva base de datos con el fin de ayudarle con su tarea de investigación.
