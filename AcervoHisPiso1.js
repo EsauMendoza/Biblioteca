@@ -18,37 +18,37 @@ const App = () => {
       <MenuButton 
         title="1.1 Archivo de la Real Audiencia de la Nueva Galicia" 
         onPress={() => navigation.navigate('Piso1')} 
-        imageSource={require('./fotos/Antiguo2.jpg')}
+        imageSource={require('./fotos/GaleriaHis3.png')}
       />
       <MenuButton 
-        title="1.2 Supremo Tribunal de Justiia del Estado de Jalisco" 
-        onPress={() => navigation.navigate('')} 
-        imageSource={require('./fotos/Libreria4.jpg')}
+        title="1.2 Supremo Tribunal de Justicia del Estado de Jalisco" 
+        onPress={() => navigation.navigate('Ahp1A2')} 
+        imageSource={require('./fotos/Antiguo3.jpg')}
       />
       <MenuButton 
         title="1.3 Direccion General de Instruccion Publica" 
-        onPress={() => navigation.navigate('')} 
-        imageSource={require('./fotos/Antiguo1.jpg')}
+        onPress={() => navigation.navigate('Ahp1A3')} 
+        imageSource={require('./fotos/Antiguo4.jpg')}
       />
       <MenuButton 
         title="1.4 Hospital" 
-        onPress={() => navigation.navigate('')} 
-        imageSource={require('./fotos/Libreria.jpg')}
+        onPress={() => navigation.navigate('Ahp1A4')} 
+        imageSource={require('./fotos/Antiguo6.jpg')}
       />
       <MenuButton 
         title="1.5 Archivos Particulares" 
-        onPress={() => navigation.navigate('')} 
-        imageSource={require('./fotos/Libros3.jpg')}
+        onPress={() => navigation.navigate('Ahp1A5')} 
+        imageSource={require('./fotos/Antiguo5.jpg')}
       />
       <MenuButton 
         title="1.6 Microfilmes" 
-        onPress={() => navigation.navigate('')} 
-        imageSource={require('./fotos/Libreria5.jpg')}
+        onPress={() => navigation.navigate('Ahp1A6')} 
+        imageSource={require('./fotos/micro.jpg')}
       />
       <MenuButton 
         title="1.7 Mapoteca" 
-        onPress={() => navigation.navigate('')} 
-        imageSource={require('./fotos/Libreria5.jpg')}
+        onPress={() => navigation.navigate('Ahp1A7')} 
+        imageSource={require('./fotos/GaleriaHis5.png')}
       />
     </View>
   );

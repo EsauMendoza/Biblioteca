@@ -16,14 +16,24 @@ const App = () => {
   return (
     <View style={styles.container}>
       <MenuButton 
-        title="4.1 Publicaciones Seriadas de Jalisco (Del S.XIX hasta 1982)" 
-        onPress={() => navigation.navigate('Ahp41')} 
-        imageSource={require('./fotos/Antiguo2.jpg')}
+        title="1.5.1 Dirección General de Rentas" 
+        onPress={() => navigation.navigate('')} 
+        imageSource={require('./fotos/Antiguo13.jpg')}
       />
       <MenuButton 
-        title="Coleccion Francisco Navarro" 
-        onPress={() => navigation.navigate('Ahcfn')} 
-        imageSource={require('./fotos/Libreria4.jpg')}
+        title="1.5.2 Ferrocarriles de Jalisco" 
+        onPress={() => navigation.navigate('')} 
+        imageSource={require('./fotos/Antiguo14.jpg')}
+      />
+      <MenuButton 
+        title="1.5.3 Jesús Camarena Archivos Particulares" 
+        onPress={() => navigation.navigate('')} 
+        imageSource={require('./fotos/Antiguo6.jpg')}
+      />
+      <MenuButton 
+        title="1.5.4 Capitán de Fragata de la Aramada Méxicana Juan José Matute" 
+        onPress={() => navigation.navigate('')} 
+        imageSource={require('./fotos/Antiguo9.jpg')}
       />
     </View>
   );

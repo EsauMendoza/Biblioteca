@@ -16,15 +16,25 @@ const App = () => {
   return (
     <View style={styles.container}>
       <MenuButton 
-        title="4.1 Publicaciones Seriadas de Jalisco (Del S.XIX hasta 1982)" 
-        onPress={() => navigation.navigate('Ahp41')} 
+        title="Jaime Sabines" 
+        onPress={() => navigation.navigate('P2udg')} 
         imageSource={require('./fotos/Antiguo2.jpg')}
       />
       <MenuButton 
-        title="Coleccion Francisco Navarro" 
-        onPress={() => navigation.navigate('Ahcfn')} 
+        title="Manuel R. Lapuente" 
+        onPress={() => navigation.navigate('')} 
         imageSource={require('./fotos/Libreria4.jpg')}
       />
+      <MenuButton 
+        title="Joe y a su chica" 
+        onPress={() => navigation.navigate('')} 
+      />
+      <MenuButton 
+        title="Crísalida" 
+        onPress={() => navigation.navigate('')} 
+        imageSource={require('./fotos/Libreria4.jpg')}
+      />
+     
     </View>
   );
 };

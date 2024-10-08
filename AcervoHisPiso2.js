@@ -17,22 +17,22 @@ const App = () => {
     <View style={styles.container}>
       <MenuButton 
         title="2.1 Acervo General" 
-        onPress={() => navigation.navigate('Ahp1')} 
+        onPress={() => navigation.navigate('Ahp2ag')} 
         imageSource={require('./fotos/Antiguo2.jpg')}
       />
       <MenuButton 
         title="2.2 Coleccion Privada" 
-        onPress={() => navigation.navigate('Ahp2')} 
+        onPress={() => navigation.navigate('Ahp2cp')} 
         imageSource={require('./fotos/Libreria4.jpg')}
       />
       <MenuButton 
         title="2.3 Tesoro" 
-        onPress={() => navigation.navigate('Ahp3')} 
+        onPress={() => navigation.navigate('Ahp2tac')} 
         imageSource={require('./fotos/Antiguo1.jpg')}
       />
       <MenuButton 
         title="2.4 Archivos Visuales y Sonoros: Fonoteca" 
-        onPress={() => navigation.navigate('Ahp4')} 
+        onPress={() => navigation.navigate('Ahp2avs')} 
         imageSource={require('./fotos/Libreria.jpg')}
       />
     </View>

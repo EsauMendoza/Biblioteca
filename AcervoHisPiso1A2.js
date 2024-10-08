@@ -16,14 +16,29 @@ const App = () => {
   return (
     <View style={styles.container}>
       <MenuButton 
-        title="4.1 Publicaciones Seriadas de Jalisco (Del S.XIX hasta 1982)" 
-        onPress={() => navigation.navigate('Ahp41')} 
-        imageSource={require('./fotos/Antiguo2.jpg')}
+        title="1.2.1 Ramo Civil. Supremo Tribunal" 
+        onPress={() => navigation.navigate('Ahp1A2d1')} 
+        imageSource={require('./fotos/Antiguo11.jpg')}
       />
       <MenuButton 
-        title="Coleccion Francisco Navarro" 
-        onPress={() => navigation.navigate('Ahcfn')} 
-        imageSource={require('./fotos/Libreria4.jpg')}
+        title="1.2.2 Ramo Criminal. Supremo Tribunal de Justicia" 
+        onPress={() => navigation.navigate('Ahp1A2d2')} 
+        imageSource={require('./fotos/Antiguo16.jpg')}
+      />
+      <MenuButton 
+        title="1.2.3 Ramo Administrativo. Supremo Tribunal" 
+        onPress={() => navigation.navigate('Ahp1A2d3')} 
+        imageSource={require('./fotos/Antiguo13.jpg')}
+      />
+      <MenuButton 
+        title="1.2.4 Libros de Jueces y magistrados. Supremo Tribunal" 
+        onPress={() => navigation.navigate('Ahp1A2d4')} 
+        imageSource={require('./fotos/Antiguo14.jpg')}
+      />
+      <MenuButton 
+        title="1.2.5 Exámenes de Abogados. Supremo Tribunal" 
+        onPress={() => navigation.navigate('Ahp1A2d5')} 
+        imageSource={require('./fotos/Antiguo15.jpg')}
       />
     </View>
   );

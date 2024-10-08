@@ -18,32 +18,32 @@ const App = () => {
       <MenuButton 
         title="Piso 1. Archivos y Mapoteca" 
         onPress={() => navigation.navigate('Ahp1')} 
-        imageSource={require('./fotos/Antiguo2.jpg')}
+        imageSource={require('./fotos/GaleriaHis3.png')}
       />
       <MenuButton 
         title="Piso 2. Biblioteca Álvarez del Castillo y Fonoteca" 
         onPress={() => navigation.navigate('Ahp2')} 
-        imageSource={require('./fotos/Libreria4.jpg')}
+        imageSource={require('./fotos/Libreria6.jpg')}
       />
       <MenuButton 
         title="Piso 3. Periódicos de Jalisco" 
         onPress={() => navigation.navigate('Ahp3')} 
-        imageSource={require('./fotos/Antiguo1.jpg')}
+        imageSource={require('./fotos/Antiguo13.jpg')}
       />
       <MenuButton 
         title="Piso 4. Publicaciones seriadas de Jalisco (Del S.XIX hasta 1982) y Fonoteca" 
         onPress={() => navigation.navigate('Ahp4')} 
-        imageSource={require('./fotos/Libreria.jpg')}
+        imageSource={require('./fotos/Libreria7.jpg')}
       />
       <MenuButton 
         title="Piso 5. Acervo General, Fondos Particulares, Cinemateca y Fototeca de Jalisco" 
         onPress={() => navigation.navigate('Ahp5')} 
-        imageSource={require('./fotos/Libros3.jpg')}
+        imageSource={require('./fotos/Libros1.jpg')}
       />
       <MenuButton 
         title="Piso 6. Fondos Especiales" 
         onPress={() => navigation.navigate('Ahp6')} 
-        imageSource={require('./fotos/Libreria5.jpg')}
+        imageSource={require('./fotos/Libros4.jpeg')}
       />
     </View>
   );

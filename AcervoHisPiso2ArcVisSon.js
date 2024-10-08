@@ -16,15 +16,16 @@ const App = () => {
   return (
     <View style={styles.container}>
       <MenuButton 
-        title="4.1 Publicaciones Seriadas de Jalisco (Del S.XIX hasta 1982)" 
-        onPress={() => navigation.navigate('Ahp41')} 
+        title="Colección Radio Universidad De Guadalajara" 
+        onPress={() => navigation.navigate('Ahp2avscrudg')} 
         imageSource={require('./fotos/Antiguo2.jpg')}
       />
       <MenuButton 
-        title="Coleccion Francisco Navarro" 
-        onPress={() => navigation.navigate('Ahcfn')} 
+        title="Colección Arturo Xavier González Santana" 
+        onPress={() => navigation.navigate('')} 
         imageSource={require('./fotos/Libreria4.jpg')}
       />
+     
     </View>
   );
 };
