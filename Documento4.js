@@ -39,37 +39,53 @@ export default class QuienesSom extends Component {
             </View>
           </ImageBackground>
         ) : (
-          <View style={{ flex: 1 }}>
-            <View style={{ height: '50%', width: '90%', backgroundColor: '#454545', borderRadius: 5, marginLeft: 20, marginTop: 10 }}>
+          <View>
+            <View style={{ height: '50%', width: '90%', backgroundColor: '#454545', borderRadius: 10, marginLeft: 20 }}>
               <Image 
                 source={require('./fotos/Antiguo5.jpg')} 
-                style={{ height: '70%', width: '60%', marginTop: '10%', borderRadius: 5, alignSelf: 'center' }}
+                style={{ height: '85%', width: '60%', marginTop: '5%', borderRadius: 5, alignSelf: 'center' }}
               />
-              <TouchableOpacity style={{ borderWidth: 0, borderColor: 'white', width: '30%', height: '7%', alignSelf: 'center', justifyContent: 'center', marginTop: 1 }} onPress={this.handleImagePress}>
-                <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 15, textAlign: 'center', marginTop:20, height:'100%', borderColor:'red', borderWidth:0}}>Ver Imagen</Text>
+              <TouchableOpacity 
+                style={styles.imageButton} 
+                onPress={this.handleImagePress}
+              >
+                <Text style={styles.imageButtonText}>Ver Imagen</Text>
               </TouchableOpacity>
             </View>
-            <Text style={{color:'white', fontSize:12, borderRadius: 5, backgroundColor: 'darkred', marginTop: 10, marginHorizontal: 20, width:'90%' }}>Piso 1.1 Archivo de la Real Audiencia de la Nueva Galicia</Text>
 
+            <Text style={{ color: 'white', fontSize: 13, borderRadius: 5, backgroundColor: 'darkred', marginTop: 10, marginHorizontal: 20 }}>
+              Piso 1.1 Archivo de la Real Audiencia de la Nueva Galicia
+            </Text>
             <View style={{ flexDirection: 'row', width: '40%', alignItems: 'center', marginTop: 10, marginLeft: 20 }}>
               <Image 
                 source={require('./fotos/ico3.png')} 
                 style={{ height: 25, width: 25, marginRight: -30 }}
               />
-              <Text style={{ fontWeight: 'bold', color: 'black', fontSize: 15, marginLeft: 40 }}>Presentacion</Text>
+              <Text style={{ fontWeight: 'bold', color: 'black', fontSize: 15, marginLeft: 40 }}>Presentación</Text>
             </View>
 
             <View style={{ height: 1, backgroundColor: 'gray', marginTop: 10, marginHorizontal: 20 }}></View>
 
             <ScrollView style={{ borderWidth: 0, width: '90%', marginLeft: 15 }} contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 10 }}>
               <Text style={{ color: 'black', fontSize: 15, lineHeight: 20, textAlign: 'justify' }}>
-              El Juzgado General de bienes de Difuntos contiene documentos relativos a los españoles que murieron intestados en las posesiones hispánicas.  
+                El Juzgado General de bienes de Difuntos contiene documentos relativos a los españoles que murieron intestados en las posesiones hispánicas.  
               </Text>
             </ScrollView>
 
-            <View style={{ height: 1, backgroundColor: 'gray', marginTop: 10, marginHorizontal: 20 }}></View>
+            <View style={{ height: 1, backgroundColor: 'gray', marginTop: -30, marginHorizontal: 20 }}></View>
 
             <Image source={require('./fotos/Logo3.jpg')} style={styles.logo} />
+
+            <View style={styles.imageRow}>
+              <Image 
+                source={require('./fotos/Logo6.png')} 
+                style={styles.smallImage}
+              />
+              <Image 
+                source={require('./fotos/Logo7.png')} 
+                style={styles.smallImage}
+              />
+            </View>
           </View>
         )}
       </View>
@@ -78,12 +94,6 @@ export default class QuienesSom extends Component {
 }
 
 const styles = {
-  logo: {
-    height: '10%',
-    width: '40%',
-    marginLeft: 20,
-    marginTop: 10,
-  },
   closeButton: {
     marginTop: 20,
     padding: 10,
@@ -95,4 +105,38 @@ const styles = {
     fontSize: 16,
     fontWeight: 'bold',
   },
+  imageButton: {
+    borderWidth: 0,
+    borderColor: 'white',
+    width: '30%',
+    height: '7%',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    marginTop: 0,
+  },
+  imageButtonText: {
+    color: 'white', 
+    fontWeight: 'bold',
+    fontSize: 15,
+    textAlign: 'center',
+  },
+  imageRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between', // Cambiar a 'space-between'
+    marginHorizontal: 20, // Puedes ajustar el margen horizontal del contenedor
+  },
+  logo: {
+    height: '12%',
+    width: '42%',
+    marginLeft: 20,
+    marginTop: 10,
+  },
+  smallImage: {
+    marginTop: -75,
+    height: 90,
+    width: 70,
+    backgroundColor: '#ddd',
+    marginHorizontal: 50, // Agregar margen horizontal a cada imagen
+  },
 };
+
