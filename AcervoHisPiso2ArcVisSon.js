@@ -18,12 +18,12 @@ const App = () => {
       <MenuButton 
         title="Colección Radio Universidad De Guadalajara" 
         onPress={() => navigation.navigate('Ahp2avscrudg')} 
-        imageSource={require('./fotos/Antiguo2.jpg')}
+        imageSource={require('./fotos/Libros2.png')}
       />
       <MenuButton 
         title="Colección Arturo Xavier González Santana" 
         onPress={() => navigation.navigate('')} 
-        imageSource={require('./fotos/Libreria4.jpg')}
+        imageSource={require('./fotos/persona4.jpg')}
       />
      
     </View>

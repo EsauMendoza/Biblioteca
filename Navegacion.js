@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator, DrawerToggleButton, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
-import { Image, TouchableOpacity, View, SectionItem, Linking, Text, Button} from 'react-native';
+import { Image, TouchableOpacity, View, SectionItem, Linking, Text, Button, useContext} from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
+
 import PRINCIPAL from './Principal'; 
 import QS from './QuienesSom'; import QSAB from './QuienesSomAB'; import QSABH from './QuienesSomABHis'; import QSABHO from './QuienesSomABHoy'; 
 import QSH from './QuienesSomHis'; import QSHP from './QuienesSomHisPrime'; import QSHN from './QuienesSomHisNom'; import QSD from './QuienesSomDirec'; import QSU from './QuienesSomUbi'; import QSR from './QuienesSomRedes'; import QSCB from './QuienesSomBiblio'; import QSC from './QuienesSomCredi';
@@ -14,16 +15,23 @@ import AC from './AcervoComt'; import ACP1 from './AcervoComtPiso1'; import ACP2
 import PISO2NOVE from './Piso2nove'; import PISO4 from './Piso4'; import PISO5 from './Piso5'; 
 import AHP41 from './AcervoHis4-1'; import AHCFN from './AcervoHisColFran';
 import AHP2AG from './AcervoHisPiso2AcerGen'; import AHP2CP from './AcervoHisPiso2ColePriv'; import AHP2TAC from './AcervoHisPiso2TesAlv';
-import AHP1A2 from './AcervoHisPiso1A2'; import AHP1A3 from './AcervoHisPiso1A3'; import AHP1A4 from './AcervoHisPiso1A4';import AHP1A5 from './AcervoHisPiso1A5';import AHP1A6 from './AcervoHisPiso1A6';import AHP1A7 from './AcervoHisPiso1A7';
+import AHP1A2 from './AcervoHisPiso1A2'; import AHP1A3 from './AcervoHisPiso1A3'; import AHP1A4 from './AcervoHisPiso1A4'; 
+import AHP1A5 from './AcervoHisPiso1A5'; 
+import AHP1A5D1 from './AcervoHisPiso1A5D1'; import AHP1A5D2 from './AcervoHisPiso1A5D2';import AHP1A5D3 from './AcervoHisPiso1A5D3';import AHP1A5D4 from './AcervoHisPiso1A5D4';
+
+import AHP1A6 from './AcervoHisPiso1A6';import AHP1A7 from './AcervoHisPiso1A7';
 import AHP2AVS from './AcervoHisPiso2ArcVisSon'; 
 import AHP2AVSCRUDG from './AHP224AVSCRUDG'; 
-import P2UDG from './PISO2UDG'; import BD from './BaseDatos'; import EVNTS from './Eventos'; import GH from './GaleriaHis'; import NTAS from './Noticias'; import ico6 from './fotos/ico6.png'; import ico9 from './fotos/ico9.png';
+import P2UDG from './PISO2UDG'; import P2UDG2 from './PISO2UDG2'; import P2UDG3 from './PISO2UDG3'; import P2UDG4 from './PISO2UDG4'; 
+
+
+import BD from './BaseDatos'; import EVNTS from './Eventos'; import GH from './GaleriaHis'; import NTAS from './Noticias'; import ico6 from './fotos/ico6.png'; import ico9 from './fotos/ico9.png';
 import AHP1A2D1 from './AcervoHisPiso1A2D1'; import AHP1A2D2 from './AcervoHisPiso1A2D2'; import AHP1A2D3 from './AcervoHisPiso1A2D3'; import AHP1A2D4 from './AcervoHisPiso1A2D4'; import AHP1A2D5 from './AcervoHisPiso1A2D5'; 
 
 
 function ImageDrawerContent(navigation ) {
   return (
-    <DrawerContentScrollView {...navigation }>
+    <DrawerContentScrollView {...navigation}>
       <Image source={ require('./fotos/Logo.png') } resizeMethod="resize" resizeMode="contain" style={{ flex:1, alignSelf:"center", width:'80%', height:90, }} />
       <DrawerItemList {...navigation } />
       <SocialMediaLinks />
@@ -32,6 +40,8 @@ function ImageDrawerContent(navigation ) {
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
+
+
 
 const LogoHeader = () => (
   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'left', backgroundColor: 'white' }}>
@@ -49,6 +59,8 @@ const defaultScreenOptions = (title) => ({
   headerTintColor: '#FF5800',
   headerTitleStyle: { fontWeight: 'bold', fontSize: 14 },
   headerStyle: {backgroundColor: 'white'},
+  //headerLeft: () => (<Button title="atras"onPress={() => this.props.navigation.navigate.goBack()}></Button>) ,
+
 });
 
 const sections = [
@@ -89,11 +101,12 @@ const Navegacion = () => {
   return (
     <NavigationContainer>
 
-      <Drawer.Navigator initialRouteName="Principal"
+      <Drawer.Navigator backBehavior='history' initialRouteName="Principal"
         drawerContent={(props) => <ImageDrawerContent {...props} />} 
         screenOptions={({ navigation }) => ({
           drawerPosition: 'right',
           drawerActiveTintColor: '#FF5800',
+          headerBackTitleVisible: false,
           headerLeft: ({ route }) => {
             if (navigation.getState().routeNames[navigation.getState().index] === 'INICIO') {
               return null;
@@ -154,6 +167,11 @@ const Navegacion = () => {
         <Drawer.Screen name="Ahp1A3" component={AHP1A3} options={{ ...defaultScreenOptions('1.3 Direccion General de Instruccion Publica'), drawerItemStyle: { display: 'none' } }} />
         <Drawer.Screen name="Ahp1A4" component={AHP1A4} options={{ ...defaultScreenOptions('1.4 Hospital'), drawerItemStyle: { display: 'none' } }} />
         <Drawer.Screen name="Ahp1A5" component={AHP1A5} options={{ ...defaultScreenOptions('1.5 Archivos Particulares'), drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="Ahp1A5d1" component={AHP1A5D1} options={{ ...defaultScreenOptions('1.5.1 Dirección General de Rentas'), drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="Ahp1A5d2" component={AHP1A5D2} options={{ ...defaultScreenOptions('1.5.2 Ferrocarriles de Jalisco'), drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="Ahp1A5d3" component={AHP1A5D3} options={{ ...defaultScreenOptions('1.5.3 Jesús Camarena Archivos Particulares'), drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="Ahp1A5d4" component={AHP1A5D4} options={{ ...defaultScreenOptions('1.5.4 Capitán de Fragata de la Armada Méxicana Juan Jose Matute'), drawerItemStyle: { display: 'none' } }} />
+        
         <Drawer.Screen name="Ahp1A6" component={AHP1A6} options={{ ...defaultScreenOptions('1.6 Microfilmes'), drawerItemStyle: { display: 'none' } }} />
         <Drawer.Screen name="Ahp1A7" component={AHP1A7} options={{ ...defaultScreenOptions('1.7 Mapoteca'), drawerItemStyle: { display: 'none' } }} />
         <Drawer.Screen name="Ahp41" component={AHP41} options={{ ...defaultScreenOptions('4.1 Publicaciones Seriadas'), drawerItemStyle: { display: 'none' } }} />
@@ -162,8 +180,13 @@ const Navegacion = () => {
         <Drawer.Screen name="Ahp2cp" component={AHP2CP} options={{ ...defaultScreenOptions('2.2 Colección Privada'), drawerItemStyle: { display: 'none' } }} />
         <Drawer.Screen name="Ahp2tac" component={AHP2TAC} options={{ ...defaultScreenOptions('2.3 Tesoro Álvarez del Castillo'), drawerItemStyle: { display: 'none' } }} />
         <Drawer.Screen name="Ahp2avs" component={AHP2AVS} options={{ ...defaultScreenOptions('2.4 Archivos Visuales'), drawerItemStyle: { display: 'none' } }} />
+        
         <Drawer.Screen name="Ahp2avscrudg" component={AHP2AVSCRUDG} options={{ ...defaultScreenOptions('Colección Radio'), drawerItemStyle: { display: 'none' } }} />
-        <Drawer.Screen name="P2udg" component={P2UDG} options={{ ...defaultScreenOptions('Colección Radio'), drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="P2udg" component={P2UDG} options={{ ...defaultScreenOptions('Jaime Sabines'), drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="P2udg2" component={P2UDG2} options={{ ...defaultScreenOptions('Manuel R. Lapuente'), drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="P2udg3" component={P2UDG3} options={{ ...defaultScreenOptions('Joe y a su chica'), drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="P2udg4" component={P2UDG4} options={{ ...defaultScreenOptions('Crísalida'), drawerItemStyle: { display: 'none' } }} />
+            
         <Drawer.Screen name="Ahp2" component={AHP2} options={{ ...defaultScreenOptions('Biblioteca Álvarez del Castillo y Fonoteca'), drawerItemStyle: { display: 'none' } }} />
         <Drawer.Screen name="Ahp3" component={AHP3} options={{ ...defaultScreenOptions('Periódicos de Jalisco'), drawerItemStyle: { display: 'none' } }} />
         <Drawer.Screen name="Ahp4" component={AHP4} options={{ ...defaultScreenOptions('Publicaciones seriadas de Jalisco'), drawerItemStyle: { display: 'none' } }} />
@@ -180,7 +203,7 @@ const Navegacion = () => {
         <Drawer.Screen name="Doc5" component={DOC5} options={{ ...defaultScreenOptions('3.1 Periódicos de Jalisco'), drawerItemStyle: { display: 'none' } }}  />  
         <Drawer.Screen name="Doc6" component={DOC6} options={{ ...defaultScreenOptions('4.1 Publicaciones Seriadas'), drawerItemStyle: { display: 'none' } }}  />  
 
-        <Drawer.Screen name="Piso2" component={PISO2} options={{ ...defaultScreenOptions('Piso 2.3 Tesoro Álvarez del Castillo'), drawerItemStyle: { display: 'none' } }} />
+        <Drawer.Screen name="Piso2" component={PISO2} screenOptions={{headerBackTitleVisible: false}} options={{  ...defaultScreenOptions('Piso 2.3 Tesoro Álvarez del Castillo'), drawerItemStyle: { display: 'none' } }} />
 
         <Drawer.Screen name="Ac" component={AC} options={{ ...defaultScreenOptions('ACERVO CONTEMPORÁNEO'), drawerLabelStyle: { color: 'darkred', fontWeight: 'normal' }, drawerItemStyle: { borderBottomWidth: 1, borderBottomColor: '#FF5800' }}} />
         <Drawer.Screen name="Acp1" component={ACP1} options={{ ...defaultScreenOptions('Biblioteca Infantil y Juvenil'), drawerItemStyle: { display: 'none' } }} />

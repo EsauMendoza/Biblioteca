@@ -18,21 +18,21 @@ const App = () => {
       <MenuButton 
         title="Jaime Sabines" 
         onPress={() => navigation.navigate('P2udg')} 
-        imageSource={require('./fotos/Antiguo2.jpg')}
+        imageSource={require('./fotos/persona1.jpg')}
       />
       <MenuButton 
         title="Manuel R. Lapuente" 
-        onPress={() => navigation.navigate('')} 
-        imageSource={require('./fotos/Libreria4.jpg')}
+        onPress={() => navigation.navigate('P2udg2')} 
+        imageSource={require('./fotos/persona2.jpg')}
       />
       <MenuButton 
         title="Joe y a su chica" 
-        onPress={() => navigation.navigate('')} 
+        onPress={() => navigation.navigate('P2udg3')} 
       />
       <MenuButton 
         title="Crísalida" 
-        onPress={() => navigation.navigate('')} 
-        imageSource={require('./fotos/Libreria4.jpg')}
+        onPress={() => navigation.navigate('P2udg4')} 
+        imageSource={require('./fotos/persona3.jpg')}
       />
      
     </View>

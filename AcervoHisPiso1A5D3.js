@@ -49,7 +49,7 @@ export default class AcervoHisPiso1A4 extends Component {
                 <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 15, textAlign: 'center', marginTop:20, height:'100%', borderColor:'red', borderWidth:0}}>Ver Imagen</Text>
               </TouchableOpacity>
             </View>
-            <Text style={{color:'white', fontSize:13, borderRadius: 5, backgroundColor: 'darkred', marginTop: 10, marginHorizontal: 20, textAlign:'center' }}>1.2.3 Ramo Administrativo</Text>
+            <Text style={{color:'white', fontSize:13, borderRadius: 5, backgroundColor: 'darkred', marginTop: 10, marginHorizontal: 20, textAlign:'center' }}>1.5.3 Jesús Camarena</Text>
 
             <View style={{ flexDirection: 'row', width: '40%', alignItems: 'center', marginTop: 10, marginLeft: 20 }}>
               <Image 
@@ -63,7 +63,7 @@ export default class AcervoHisPiso1A4 extends Component {
 
             <ScrollView style={{ borderWidth: 0, width: '90%', marginLeft: 15 }} contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 10 }}>
               <Text style={{ color: 'black', fontSize: 15, lineHeight: 20, textAlign: 'justify', lineHeight: 25}}>
-              Incluyen más de siglo y medio de procesos, sentencias, cuadrantes, actas, entradas y salidas de presos, conocimientos ejecutorias, turnos, minutas, de contabilidad: libros mayores, diarios, de caja, etc.  
+              Correspondencia personal y asuntos varios de su ejercicio en los cargos de Diputado del Congreso de la Unión, Gobernador Iterino del Estado de Jalsico y Presidente del supremo Tribunal de Justicia del Estado de Jaslico, entre los años de 1840 y 1878.
               </Text>
             </ScrollView>
 

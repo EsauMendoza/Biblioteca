@@ -17,22 +17,22 @@ const App = () => {
     <View style={styles.container}>
       <MenuButton 
         title="1.5.1 Dirección General de Rentas" 
-        onPress={() => navigation.navigate('')} 
+        onPress={() => navigation.navigate('Ahp1A5d1')} 
         imageSource={require('./fotos/Antiguo13.jpg')}
       />
       <MenuButton 
         title="1.5.2 Ferrocarriles de Jalisco" 
-        onPress={() => navigation.navigate('')} 
+        onPress={() => navigation.navigate('Ahp1A5d2')} 
         imageSource={require('./fotos/Antiguo14.jpg')}
       />
       <MenuButton 
         title="1.5.3 Jesús Camarena Archivos Particulares" 
-        onPress={() => navigation.navigate('')} 
+        onPress={() => navigation.navigate('Ahp1A5d3')} 
         imageSource={require('./fotos/Antiguo6.jpg')}
       />
       <MenuButton 
-        title="1.5.4 Capitán de Fragata de la Aramada Méxicana Juan José Matute" 
-        onPress={() => navigation.navigate('')} 
+        title="1.5.4 Capitán de Fragata de la Armada Méxicana Juan José Matute" 
+        onPress={() => navigation.navigate('Ahp1A5d4')} 
         imageSource={require('./fotos/Antiguo9.jpg')}
       />
     </View>

@@ -48,36 +48,33 @@ export default class QuienesSom extends Component {
               />
               
               <TouchableOpacity style={{width: '90%', marginTop: 25, marginLeft: -10 }} onPress={this.handleImagePress}>
-              <Text style={styles.viewButtonText}>Escuchar: "Yo no lo se de cierto"</Text>
+              <Text style={styles.viewButtonText}>Escuchar: "Manuel Rodriguez Latinoamerica"</Text>
             </TouchableOpacity>
             </View>
             
 
         <Text style={{ fontWeight: 'bold', color: '#515151', fontSize: 20, marginLeft: 20, marginTop: 10, width: '90%' }}>Archivo Sonoro. Radio Univerdiad de Guadalajara. Piso 4</Text>
-        <Text style={{ fontWeight: 'bold', color: '#515151', fontSize: 17, marginLeft: 20, marginTop: 10 }}>Jaime Sabines</Text>
+        <Text style={{ fontWeight: 'bold', color: '#515151', fontSize: 17, marginLeft: 20, marginTop: 10 }}>Manuel R. Lapuente</Text>
 
         <ScrollView style={{ marginTop: 10 }}>
         <View style={{ borderWidth: 1, borderColor: 'gray', width: 320, marginLeft: 20, marginTop: 10 }} />
         <Text style={{fontSize: 15, marginLeft: 20, lineHeight: 25,borderWidth: 0, width:'86%' }}>
           <Image source={require('./fotos/ico3.png')} style={{ height: 20, width: 20, marginTop: 10}} />
           <Text style={{fontWeight: 'bold', color: 'black', marginTop: -20}}>Titulo de la obra: </Text>
-          <Text style={{color: 'black', marginTop: -20 }}>Antalogía poética de Jaime Sabines </Text>
+          <Text style={{color: 'black', marginTop: -20 }}>Dr. Manuel Rodríguez Lapuente</Text>
         </Text>
 
           <View style={{ width: '86.5%', marginLeft: '5%' }}>
             <Text style={{ color: 'black', fontSize: 18, lineHeight: 25, textAlign: 'justify' }}>
-            {'\n'}Serie: Voz Viva de México.
-              {'\n'}Editorial: Dirección de Literatura UNAM
-              {'\n'}Lectura a cargo de: Jaime Sabines
-              {'\n'}Estudio de grabación: Estudio 19
-              {'\n'}Dirección: Mauricio Molina / Lizbeth Suárez / Margarita Heredia.
-              {'\n'}Operacion y postproducción: Rodolfo Sánchez Alvarado / Mauricio Molina / David Bojorges.
+            {'\n'}Serie: Latinoamérica en el mundo.
+              {'\n'}Género: Programa radiofónico
+              {'\n'}Intérpretes: Dr. Manuel Rodríguez Lapuente
+              {'\n'}Año: 1989
+              {'\n'}Breve sinopsis:
+              {'\n'}Serie radiofónica producida y conducida por el Dr. Manuel Rodríguez Lapuente. Reproducimos la emisión del sábado 14 de marzo de 1989, en el que el doctor hace un análisis del 
+              Encuentro de cancilleres del grupo de los ocho, en Guayana, Puerto Ordaz, Venezuela. El Dr. Manuel Rodríguez Lapuente fue un reconocido humanista, politico, autor de libros, maestro, director
+              de la Revista de la Univerdiad de Guadalajara y director de Estudios Sociales y de la Facultad de Filosofía y Letras.
               {'\n'}Año de grabación: 1964
-            </Text>
-            <Text style={{ color: 'black', fontSize: 18, lineHeight: 25, textAlign: 'justify' }}>
-            {'\n'}De la serie Voz Viva de México compartimos el disco de vinilo con poemas de Jaime Sabines leídos por él mismo. La cadencia de su lectura 
-              enaltecen estos maravillosos versos que hablan sobre el amor, la soledad y la muerte, y que gracias a su lenguaje sencillo y directo obtuvieron 
-              la aceptación no sólo de la academia sino de gran parte de los mexicanos.{'\n'}
             </Text>
           </View>
         </ScrollView>
@@ -150,3 +147,4 @@ const styles = StyleSheet.create({
     marginTop: -10,
   },
 });
+

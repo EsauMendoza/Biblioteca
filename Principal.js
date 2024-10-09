@@ -32,7 +32,6 @@ const App = () => {
   ];
 
   const navigation = useNavigation();
-  //CARRUSEL DE IMAGENES
   useEffect(() => {
     imageRef.current = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
