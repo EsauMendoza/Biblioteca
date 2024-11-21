@@ -1,12 +1,10 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { WebView } from 'react-native-webview';
 
-export default class QuienesSomDirec extends Component {
+class MyWeb extends Component {
   render() {
-    return (
-      <View>
-        <Text>QuienesSomDirec</Text>
-      </View>
-    )
+    return <WebView source={{ uri: 'http://148.202.217.8/Directorio.php' }} style={{ marginTop: '3%', marginRight: '3%' }} />;
   }
 }
+
+export default MyWeb;
